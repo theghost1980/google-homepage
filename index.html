@@ -1,92 +1,55 @@
 <!DOCTYPE html>
 <html>
     <head>
-        <style>
-            * { css }
-            body {
-                background-image: white;
-            }
-            .container {
-                padding-top: 110px;
-                margin: auto;
-                width: 50%;
-                display: flex;
-                flex-direction: column;
-                align-items: center;
-            }
-            .container img{
-                display: block;
-                margin: auto;
-            }
-            .topR {
-                display: flex;
-                position: fixed;
-                right: 0;
-                width: auto;
-                margin-right: 30px;
-                
-            }
-            .topR p {
-                padding-left: 5px;
-                padding-right: 5px;
-            }
-            .imgR {
-                display: block;
-                height: 3vw;
-                border-radius: 40%;
-            }
-            #searchB {
-                margin-top: 60px;
-                border-radius: 10%;
-                border: 1px solid gray;
-                width: 400px;
-                height: 60px;
-                display: flex;
-            } 
-            #searchT {
-                width: 250px;
-                height: 20px;
-                margin: auto;
-                border: none;
-            }
-            #buttonsC {
-                margin-top: 30px;
-            }
-            .buttons {
-                height: 30px;
-            }
-            .footP {
-                position: fixed;
-                bottom:0;
-                width: 100%;
-                background-color: rgb(187, 186, 186);
-                border: 1px solid rgb(56, 56, 56);
-            } 
-        </style>
+        <meta charset="UTF-8">
+        <meta name="description" content="Full Stack Developer project Odin practicing search page example">
+        <meta name="keywords" content="HTML, CSS, JavaScript, theodinproject">
+        <meta name="author" content="Saturno Mangieri @theghost1980-github">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="/styles/styles.css">
     </head>
     <body>
-        <div class="topR">
-            <div><p><a href="">Gmail</a></p></div>
-            <div><p><a href="">Images</a></p></div>
-            <div id="divImgR"><a href=""><img src="heisenberg.png" alt="Heisenberg Picture" class="imgR"></a></div>
-        </div>
-        <div class="container">
-                <div>    
-                    <img src="googlelogo_color_272x92dp.png" alt="Google Logo">
+        <div id="viewport">
+        <nav id="top-bar">
+            <p><a href="">Gmail</a></p>
+            <p><a href="">Images</a></p>
+            <a href="">
+            <div id="frame-path">
+                <img src="media-images/path.svg" id="path">
+            </div> 
+            </a>
+            <a href=""> 
+            <div id="frame-path2">
+                <img src="media-images/heisenberg.png" id="path2">
+            </div> 
+            </a>
+        </nav>
+        <main id="content">
+            <img src="media-images/googlelogo_color_272x92dp.png" id="logo">
+            <div id="search-c">
+                <input type="text" id="search-box" autofocus placeholder="Type Here To Search">
+            </div>
+            <div id="button-container">
+                <button class="butt">Search</button>
+                <button class="butt">I'm feeling lucky</button>
+            </div>
+            <p id="line">Offered by Google in: <a href="">English</a></p>
+        </main>
+        <footer>
+            <div><p class="footext">Venezuela</p></div>
+            <div id="flex-bottom">
+                <div class="f-left">
+                    <a href=""><p>Advertising</p></a>
+                    <a href=""><p>Bussines</p></a>
+                    <a href=""><p>About Google</p></a>
                 </div>
-                <div id="searchB">
-                    <input type="text" id="searchT" autofocus>
+                <div class="f-right">
+                    <p><a href="">Privacy</a></p>
+                    <p><a href="">Conditions</a></p>
+                    <p><a href="">Preferences</a></p>
                 </div>
-                <div id="buttonsC">
-                    <button id="normalS" class="buttons">Search</button>
-                    <button id="luckyS" class="buttons">I'm fellin lucky</button>
-                </div>
-                <div>
-                    <p>Offered by Google: <a href="">English</a></p>
-                </div>
-        </div>
-        <div class="footP">
-            <div><p>Venezuela</p></div>
-        </div>
+            </div>
+        </footer>
+    </div>
     </body>
 </html>
