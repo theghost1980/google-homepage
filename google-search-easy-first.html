@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <style>
+            html {
+	            height: 100%;
+	            margin: 0;
+            }
+            body {
+                background-image: white;
+            }
+            .container {
+                padding-top: 110px;
+                margin: auto;
+                width: 50%;
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+            }
+            .container img{
+                display: block;
+                margin: auto;
+            }
+            .topR {
+                display: flex;
+                position: fixed;
+                right: 0;
+                width: auto;
+                margin-right: 30px;
+                
+            }
+            .topR p {
+                padding-left: 5px;
+                padding-right: 5px;
+            }
+            .imgR {
+                display: block;
+                height: 3vw;
+                border-radius: 40%;
+            }
+            #searchB {
+                margin-top: 60px;
+                border-radius: 10%;
+                border: 1px solid gray;
+                width: 400px;
+                height: 60px;
+                display: flex;
+            } 
+            #searchT {
+                width: 250px;
+                height: 20px;
+                margin: auto;
+                border: none;
+            }
+            #buttonsC {
+                margin-top: 30px;
+            }
+            .buttons {
+                height: 30px;
+            }
+            .footP {
+                display: block;
+                position: fixed;
+                bottom:0;
+                width: 100%;
+                background-color: rgb(187, 186, 186);
+                border: 1px solid rgb(56, 56, 56);
+            } 
+            #father {
+                margin: 0px;
+            }
+        </style>
+    </head>
+    <body>
+        <header>
+            <title>Practice Site Similar to Google Search Engine</title>
+        </header>
+        <div id="father">
+        <div class="topR">
+            <div><p><a href="">Gmail</a></p></div>
+            <div><p><a href="">Images</a></p></div>
+            <div id="divImgR"><a href=""><img src="./media-images/heisenberg.png" alt="Heisenberg Picture" class="imgR"></a></div>
+        </div>
+        <div class="container">
+                <div>    
+                    <img src="./media-images/googlelogo_color_272x92dp.png" alt="Google Logo">
+                </div>
+                <div id="searchB">
+                    <input type="text" id="searchT" autofocus>
+                </div>
+                <div id="buttonsC">
+                    <button id="normalS" class="buttons">Search</button>
+                    <button id="luckyS" class="buttons">I'm fellin lucky</button>
+                </div>
+                <div>
+                    <p>Offered by Google: <a href="">English</a></p>
+                </div>
+        </div>
+        <div class="footP">
+            <div><p>Venezuela</p></div>
+        </div>
+        </div>
+    </body>
+</html>
