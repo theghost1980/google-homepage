@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <link rel="stylesheet" href="./styles/form-improved.css">
+    </head>
+    <body>
+        <!-- A main wrapper just as normal rule for mi coding -->
+        <div id="main-wrapper">
+            <!-- The form div container -->
+            <div id="container">
+            <form>
+                <div id="text-form">
+                    <h1>FCC Information & Satisfaction Form</h1>
+                    <p class="medium-text">Here in FCC we would love to know about you, as a programmer. We also want to thank you for taking your precious time to fill this data. Please do not hesitate in contacting us anytime.</p>
+                </div>
+                <div class="form-items">
+                    <!-- type="text" pattern="[a-zA-Z0-9]*" -->
+                    <label for="name">Full Name:</label>
+                    <input id="name" type="text" class="input-t" placeholder="Full Name Here" required>
+                    <label for="email">E-mail:</label>
+                    <input type="email" placeholder="Email format: xxxxxx@xxxx.com" id="e-mail" class="input-t" pattern="[^[\w-\.]+@([\w-]+\.)+[\w-]{2,4}$/g]" required>
+                    <label for="phone">Phone Number:</label>
+                    <input type="number" id="p-number" placeholder="Only Numbers" pattern="[0-9]" required>
+                    <label for="gender">Please Select your Gender:</label>
+                    <div id="gender">    
+                        <label for="option1">Male</label>
+                        <input type="radio" id="option1" name="radio" required>
+                        <label for="option2">Female</label>
+                        <input type="radio" id="option2" name="radio">
+                        <label for="option3">Prefer not to say.</label>
+                        <input type="radio" id="option3" name="radio">
+                    </div>
+                    <label for="p-languages" id="l-programs">Please Let us know what languages do you have experience with: (Select all that apply)</label>
+                    <div id="p-languages">
+                        <label for="cs">C# (C-SHARP) <input type="checkbox" name="plang[]"></label> 
+                        <label for="cpp">C++ (C-Plus Plus) <input type="checkbox" name="plang[]"></label>
+                        <label for="html">HTML <input type="checkbox" name="plang[]"></label>
+                        <label for="html5">HTML5 <input type="checkbox" name="plang[]"></label>
+                        <label for="js">Js (Javascript) <input type="checkbox" name="plang[]"></label>
+                    </div>
+                    <label for="overall-exp" id="over-l">Please Select all that apply about your overall experience:</label>
+                    <div id="overall-exp" required>
+                        <label for="exc">It is been Excellent so far. <input type="radio"  id="exc" name="expe"></label>
+                        <label for="good">It is been good enough. <input type="radio"  id="good" name="expe"></label>
+                        <label for="notbad">It is been not bad. It could be better. <input type="radio" id="soso" name="expe" required></label>
+                    </div>
+                    <label for="comments" id="l-comments">Please Let us know any comments or suggestions</label>
+                    <textarea id="comments"></textarea>
+                    <div id="buttons-c">
+                        <button id="send" type="submit">Send Form</button>
+                        <button id="reset" type="reset">Reset Form</button>
+                    </div>
+                </div>
+            </form>
+                <div id="credits">
+                    <p>Design by @theghost1980</p>
+                </div>
+            </div>
+
+
+        </div>
+    </body>
+</html>

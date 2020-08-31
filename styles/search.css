@@ -1,0 +1,235 @@
+* {
+    margin: 0;
+}
+body {
+    font-family: arial,sans-serif;
+    font-size: 14px;
+}
+a:link {
+    text-decoration: none;
+}
+hr {
+    margin-top: 3px;
+}
+nav {
+    width: auto;
+    /* border: 1px solid blue; */
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+#nav-top-left {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    height: auto;
+}
+.outerwrapper {
+    display: inline-block;
+    margin: 20px;
+    align-items: center;
+}
+.frame {
+    width: 100px;
+    /* border: 1px solid black; */
+    vertical-align: middle;
+    text-align: center;
+    display: table-cell;
+}
+.frame img {
+    display: block;
+    max-width: 80%;
+    max-height: 80%;
+}
+#search-box {
+    font-size:16px;
+    transition:0.4s;
+    width:auto;
+    height: 30px;
+    border: none;
+}
+#search-c {
+    display: flex;
+    width: auto;
+    height: 40px;
+    border: 1px solid rgb(182, 181, 181);
+    border-radius: 40px;
+    justify-content: flex-start;
+    justify-items: center;
+    align-items: center;
+    padding-left: 10px;
+    margin-top: 15px;
+    /* box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19); */
+}
+.middle {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+#nav-top-right {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+}
+#nav-top-right > p {
+    margin-left: 10px;
+}
+#frame-path {
+    height: 20px;
+    display: flex;            
+    align-items: center;      
+    justify-content: center;
+}
+#frame-path2 {
+    height: 40px;
+    display: flex;            
+    align-items: center;      
+    justify-content: center;
+}
+/* Path made using https://editor.method.ac/ */
+#path {
+    max-width: 100%;
+    max-height: 100%;
+    margin-left: 10px;
+}
+#path2 {
+    max-width: 100%;
+    max-height: 100%;
+    border-radius: 50%;
+}
+.flex-row {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+.flex-row > p {
+    margin-right: 20px;
+    padding-top: 10px;
+}
+.mini-img {
+    height: 10px;
+    padding-right: 3px;
+}
+/* Credits */
+/* All the icons where downloaded from Icon8.com */
+footer {
+    /* position: absolute; */
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    background-color: rgb(211, 210, 210);
+    border: 1px solid gray;
+}
+#flex-country {
+    height: 30px;
+    display: flex;
+    justify-content: flex-start;
+    align-content: center;
+    flex-direction: row;
+    align-items: center;
+}
+.footext {
+    padding-left: 5px;
+    color: rgb(80, 78, 78);
+}
+#flex-bottom {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    border: 1px solid gray;
+    height: 30px;
+}
+.f-left {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: center;
+}
+.f-left > a {
+    margin: 5px;
+}
+.f-right {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+    align-items: center;
+}
+.f-right > p {
+    margin: 5px;
+}
+#col-empty-left {
+    /* background-color: cornsilk;
+    border: 1 px solid black; */
+    width: 140px;
+}
+#col-empty-right {
+    /* background-color: burlywood;
+    border: 1px solid black; */
+    width: 440px;
+}
+#col-content {
+    /* background-color: blue;
+    border: 1px solid black; */
+    flex-grow: 1;
+}
+main {
+    display: flex;
+    flex-direction: row;
+}
+.gray {
+    margin-top: 5px;
+    margin-left: 15px;
+    color: gray;
+}
+#col-content,#search-r {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+}
+#search-r {
+    margin-top: 15px;
+}
+#search-r > p {
+    margin-top: 5px;
+}
+.medium-text-c {
+    font-size: 20px;
+}
+.big-text {
+    font-size: 30px;
+    margin-top: 10px;
+}
+#video-container {
+    display: flex;
+    flex-direction: row;
+}
+#video-container > div {
+    margin-right: 10px;
+}
+.video-view {
+    border-radius: 6%;
+    border: 1px solid rgb(165, 163, 163);
+    width: 180px;
+    height: 230px;
+    display: flex;
+    justify-content: space-evenly;
+    flex-direction: column;
+}
+.video-view > img {
+    display: block;
+    max-width: 100%;
+    max-height: 100%;
+}
+.medium-sep {
+    font-size: 20px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    margin-left: 5px;
+    margin-right: 5px;
+}
+.small-sep {
+    margin-top: 5px;
+    margin-bottom: 5px;
+    margin-left: 5px;
+    margin-right: 5px;
+}
