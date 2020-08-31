@@ -3,12 +3,25 @@ body {
 }
 #menu-container {
     display: flex;
-    flex-direction: column;
-    justify-content: center;
-    /* align-items: center; */
-    border: 1px solid goldenrod;
-    padding-left: 15px;
-    padding-right: 15px;
+    height: 100%;
+    width: 50%;
+    flex-wrap: wrap;
+    /* justify-content: center; */
+}
+#menu-container > div {
+    width: 100px;
+    height: 150px;
+    margin-left: 10px;
+    margin-right: 10px;
+    margin-bottom: 20px;
+}
+.mini-site > img {
+    display: block;
+    max-width: 100%;
+    max-height: 100%;
+}
+.mini-site > p {
+    font-size: 10px;
 }
 .img-centered {
     display: block;
@@ -54,5 +67,6 @@ nav > p {
     padding-left: 10px;
     padding-right: 10px;
 }
+
 /* Credits */
 /* Main image source: https://elearningindustry.com/how-design-thinking-transforming-learning-experience-free-ebook */
