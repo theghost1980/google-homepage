@@ -7,6 +7,8 @@ body {
     min-width: 150px;
     flex-wrap: wrap;
     justify-content: center;
+    margin-top: 20px;
+    border: 1px solid goldenrod;
 }
 .mini-site {
     max-width: 100px;
@@ -41,7 +43,7 @@ body {
     /* text-align: center; */
 }
 .text-inlines {
-    max-width: 50%;
+    max-width: 500px;
     text-align: justify;
     align-items: center;
 }
