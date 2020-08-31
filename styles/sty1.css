@@ -3,10 +3,10 @@ body {
 }
 #menu-container {
     display: flex;
-    height: 100%;
-    width: 50%;
+    height: auto;
+    width: auto;
     flex-wrap: wrap;
-    /* justify-content: center; */
+    justify-content: center;
 }
 #menu-container > div {
     width: 100px;
