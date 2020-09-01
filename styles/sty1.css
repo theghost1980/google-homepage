@@ -3,15 +3,16 @@ body {
 }
 #menu-container {
     display: flex;
-    height: auto;
-    min-width: 150px;
+    width: 100%;
     flex-wrap: wrap;
+    flex-direction: row;
     justify-content: center;
     margin-top: 20px;
-    border: 1px solid goldenrod;
+    /* border: 1px solid goldenrod; */
 }
 .mini-site {
-    max-width: 100px;
+    display: block;
+    width: 100px;
     height: 150px;
     margin-left: 10px;
     margin-right: 10px;
@@ -38,30 +39,29 @@ body {
     max-width: 100%;
 }
 #div-main-img {
-    width: 30%;
+    width: 500px;
     border: 1px solid goldenrod;
-    /* text-align: center; */
+    margin: auto;
 }
 .text-inlines {
-    max-width: 500px;
+    display: flex;
+    flex-direction: column;
+    width: 100%;
     text-align: justify;
     align-items: center;
+    margin: auto;
+}
+.text-inlines > p {
+    margin-left: 20px;
+    margin-right: 20px;
 }
 .small-text {
     font-size: 11px;
 }
-#mainwrap {
-    display: flex;
-    flex-direction: column;
-    justify-content: center; 
-    align-items: center;
-    min-height: 100%;
- }
  footer {
     display: fixed;
     bottom: 0;
     left: 0;
-    width: 100%;
     text-align: center;
     /* padding-top: 10px; */
     /* background-color: rgb(211, 210, 210); */
@@ -76,6 +76,29 @@ nav > p {
     padding-left: 10px;
     padding-right: 10px;
 }
-
 /* Credits */
 /* Main image source: https://elearningindustry.com/how-design-thinking-transforming-learning-experience-free-ebook */
+
+/* Media rules */
+@media only screen and (max-width: 400px) {
+    #menu-container {
+        width: 250px;
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: center;
+        align-items: center;
+        margin: auto;
+    }
+    .mini-site {
+        max-width: 100%;
+        max-height: 100%;
+        margin: auto;
+        margin-bottom: 40px;
+        border: 1px solid black;
+    }
+    #div-main-img {
+        width: auto;
+        border: 1px solid goldenrod;
+        margin: auto;
+    }
+}
