@@ -114,19 +114,19 @@ nav {
 }
 /* Trying bg images for products */
 #product-1 {
-    background-image: url("./media-images/guitar-1.jpeg");
+    background-image: url("../media-images/guitar-1.jpeg");
     max-width: 100%;
     max-height: 100%;
     color: black;
 }
 #product-2 {
-    background-image: url("./media-images/guitar-2.jpeg");
+    background-image: url("../media-images/guitar-2.jpeg");
     max-width: 100%; 
     max-height: 100%;
     color: black;
 }
 #product-3 {
-    background-image: url("./media-images/guitar-3.jpeg");
+    background-image: url("../media-images/guitar-3.jpeg");
     max-width: 100%;
     max-height: 100%;
     color: black;
