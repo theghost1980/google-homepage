@@ -1,0 +1,212 @@
+@import "https://fonts.googleapis.com/css?family=Lato:400,700";
+
+body {
+    height: 100%;
+    margin: 0;
+    font-family: Lato;
+    background-color: #F07767;
+    color: white;
+}
+a {
+    color:white;
+}
+nav {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    height: 50px;
+    background-color: #A35146;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    /* while creating the skeleton */
+    border: 1px solid red;
+    z-index: 1;
+}
+#nav-bar-l {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+}
+#header-img {
+    display: block;
+    max-width: 100%;
+    max-height: 100%;
+}
+#nav-bar-l > p {
+    margin-right: 20px;
+    color: white;
+}
+#main {
+    display: flex;
+    flex-direction: column;
+    top: 100px;
+    position: relative;
+}
+#features {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.feature-c {
+    display: flex;
+    flex-direction: row;
+    height: 100px;
+    width: 600px;
+    margin-top: 10px;
+    align-items: center;
+    background-color: #CC6558;
+    border-radius: 4%;
+}
+.feature-c > p,img {
+    margin-right: 10px;
+    text-align: center;
+}
+.img-fc {
+    display: block;
+    max-width: 100%;
+    max-height: 100%;
+}
+#mailer,form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 0 auto;
+    /* border: 1px solid red; */
+}
+#submit {
+    margin-top: 20px;
+    width: 200px;
+    background-color: rgb(250, 250, 118);
+}
+#send-email:hover {
+    background-color: gray;
+}
+#email {
+    width: 300px;
+}
+#video {
+    margin-top: 70px;
+    display: flex;
+    flex-direction: column;
+}
+#products-c {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+}
+.guitar-p {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    text-align: justify;
+    width: 200px;
+    border: 1px solid #63312B;
+    border-radius: 10px;
+    margin-top: 40px;
+    margin-left: 30px;
+    margin-bottom: 40px;
+    height: 250px;
+}
+/* Trying bg images for products */
+#product-1 {
+    background-image: url("/media-images/guitar-1.jpeg");
+    /* background-image: url("https://amymhaddad.s3.amazonaws.com/morocco-blue.png"); */
+    max-width: 100%;
+    max-height: 100%;
+    color: black;
+}
+#product-2 {
+    background-image: url("/media-images/guitar-2.jpeg");
+    /* background-image: url("https://amymhaddad.s3.amazonaws.com/morocco-blue.png"); */
+    max-width: 100%;
+    max-height: 100%;
+    color: black;
+}
+#product-3 {
+    background-image: url("/media-images/guitar-3.jpeg");
+    /* background-image: url("https://amymhaddad.s3.amazonaws.com/morocco-blue.png"); */
+    max-width: 100%;
+    max-height: 100%;
+    color: black;
+}
+.guitar-p > p {
+    margin-left: 5px;
+    margin-right: 5px;
+    margin-top: 5px;
+    margin-bottom: 5px;
+}
+#select-b {
+    width: 120px;
+    background-color: rgb(250, 250, 118);
+    margin-bottom: 10px;
+}
+footer {
+    margin-top: 80px;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    background-color: #A35146;
+}
+#footer-top {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+}
+#footer-base {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+}
+#footer-top > p {
+    margin-right: 10px;
+    margin-left: 10px;
+    color: rgb(199, 198, 198);
+}
+#footer-base > p {
+    margin-right: 10px;
+    margin-left: 10px;
+    color:rgb(194, 194, 194);
+}
+/* Media Rules */ 
+/* .feature-c
+#mailer,form 
+#submit
+#email
+#select-b */
+@media (max-width: 600px) {
+    header,footer {
+      flex-wrap: wrap;
+    }
+    #header-img {
+        width: 85%;
+    }
+    .text-link,.text-g {
+        font-size: 10px;
+    }
+    #mailer,form,#submit,#email {
+        width: 150px;
+    }
+    .feature-c,#video-c, #video {
+        width: auto;
+        margin-left: 10px;
+        margin-right: 10px;
+    }
+    #products-c {
+        flex-direction: column;
+        width: auto;
+    }
+    #guitar-p {
+        margin-top: 0;
+        margin-left: 0;
+        margin-right: 0;
+        margin-bottom: 0;
+    }
+    #main {
+        top: 70px;
+    }
+  }
