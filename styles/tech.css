@@ -1,11 +1,12 @@
 body {
     margin: 0;
     padding: 0;
+    background-color: #e9f0dc;
 }
 header {
     text-align: center;
     font-size: 1.7em;
-    background-color: #8eae45;
+    background-color: #94b449;
     color:white;
     text-shadow: 0 0 1px black;
 }
