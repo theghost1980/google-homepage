@@ -5,20 +5,23 @@
         <link rel="stylesheet" href="./styles/tech.css">
     </head>
     <body>
+        <!-- Testing bundle -->
+        <!-- <script src="https://cdn.freecodecamp.org/testable-projects-fcc/v1/bundle.js"></script> -->
+        <!-- end testing bundle -->
         <header>
             <title>Javascript Documentation 1.0</title>
         </header>
         <div id="mainwrapper">
-            <nav id="nav-bar">
-                <header>JS Documentation Page</header>
+            <nav id="navbar">
+                <header id="JS_Documentation_Page">JS Documentation Page</header>
                 <ul>
-                    <li><a class="nav-link" href="#introduction">Introduction</a></li>
-                    <li><a class="nav-link" href="#what-is-js">Basics - What is Javascript?</a></li>
-                    <li><a class="nav-link" href="#who">Who created Javascript?</a></li>
-                    <li><a class="nav-link" href="">Operators</a></li>
-                    <li><a class="nav-link" href="">Variables</a></li>
-                    <li><a class="nav-link" href="">What do you need to install? - Tools</a></li>
-                    <li><a class="nav-link" href="">Hello World in Javascript</a></li>
+                    <li><a class="nav-link" href="#Introduction">Introduction</a></li>
+                    <li><a class="nav-link" href="#Basics_-_What_is_Javascript?">Basics - What is Javascript?</a></li>
+                    <li><a class="nav-link" href="#Who_created_Javascript?">Who created Javascript?</a></li>
+                    <li><a class="nav-link" href="#Operators">Operators</a></li>
+                    <li><a class="nav-link" href="#Variables">Variables</a></li>
+                    <li><a class="nav-link" href="#What_do_you_need_to_install?_-_Tools">What do you need to install? - Tools</a></li>
+                    <!-- <li><a class="nav-link" href="">Hello World in Javascript</a></li>
                     <li><a class="nav-link" href="">Where to put your JS?</a></li>
                     <li><a class="nav-link" href="">What do you need to install? - Tools</a></li>
                     <li><a class="nav-link" href="">Google Chrome Developer Tools FTW</a></li>
@@ -35,13 +38,13 @@
                     <li><a class="nav-link" href="">Break & Continue</a></li>
                     <li><a class="nav-link" href="">Practical Examples using Loops</a></li>
                     <li><a class="nav-link" href="">Functions</a></li>
-                    <li><a class="nav-link" href="">Variable Scope</a></li>
+                    <li><a class="nav-link" href="">Variable Scope</a></li> -->
                 </ul>
                 <img src="./media-images/js-logo.png">
             </nav>
             <main id="main-doc">
-                <section class="main-section" id="introduction">
-                    <header>Introduction to JS</header>
+                <section class="main-section" id="Introduction">
+                    <header>Introduction</header>
                     <article>
                         <p>JavaScript is a cross-platform, object-oriented scripting language. It is a small and lightweight language. Inside a host environment (for example, a web browser), JavaScript can be connected to the objects of its environment to provide programmatic control over them.</p>
                         <p>JavaScript contains a standard library of objects, such as Array, Date, and Math, and a core set of language elements such as operators, control structures, and statements. Core JavaScript can be extended for a variety of purposes by supplementing it with additional objects; for example:</p>
@@ -55,8 +58,8 @@
                         </div>
                     </article>    
                 </section>
-                <section class="main-section" id="what-is-js">
-                    <header>What is JS?</header>
+                <section class="main-section" id="Basics_-_What_is_Javascript?">
+                    <header>Basics - What is Javascript?</header>
                     <article>
                         <ul>
                             <li>JavaScript is the Programming Language for the Web.</li>
@@ -71,8 +74,8 @@
                         </div>
                     </article>    
                 </section>
-                <section class="main-section" id="who">
-                    <header>Who created JS?</header>
+                <section class="main-section" id="Who_created_Javascript?">
+                    <header>Who created Javascript?</header>
                     <article>
                         <h3>Creation at Netscape</h3>
                         <p>The Mosaic web browser was released in 1993. As the first browser with a graphical user interface accessible to non-technical people, it played a prominent role in the rapid growth of the nascent World Wide Web. The lead developers of Mosaic then founded the Netscape corporation, which released a more polished browser, Netscape Navigator, in 1994. Navigator quickly became the most used browser.</p>
@@ -83,6 +86,104 @@
                             <iframe id="vid" width="500" height="315" src="https://www.youtube.com/embed/3-9fnjzmXWA" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
                             <p class="cent-link"><a href="https://www.youtube.com/watch?v=3-9fnjzmXWA" target="_blank">Source <img src="./media-images/icons8-google-web-search-20.png"></a></p>
                         </div>
+                    </article>    
+                </section>
+                <section class="main-section" id="Operators">
+                    <header>Operators</header>
+                    <article>
+                        <p>JavaScript includes operators as in other languages. An operator performs some operation on single or multiple operands (data value) and produces a result. For example 1 + 2, where + sign is an operator and 1 is left operand and 2 is right operand. + operator adds two numeric values and produces a result which is 3 in this case.</p>
+                        <p class="cent-link"><a href="https://www.tutorialsteacher.com/javascript/javascript-operators" target="_blank"><img src="./media-images/icons8-google-web-search-20.png"></a></p>
+                        <code class="coding">
+                            let a = 1;<br>let b = 2;<br>let addition = a + b;
+                        </code>
+                        <p>JavaScript includes following categories of operators.</p>
+                        <ul>
+                           <li>Arithmetic Operators</li>
+                           <li>Comparison Operators</li>
+                           <li>Logical Operators</li>
+                           <li>Assignment Operators</li>
+                           <li>Conditional Operators</li>
+                        </ul>
+                        <h3>JavaScript Arithmetic Operators</h3>
+                        <table>
+                            <tr>
+                                <th>Operator</th>
+                                <th>Description</th>
+                            </tr>
+                            <tr>
+                                <td>+</td>
+                                <td>Addition</td>
+                            </tr>
+                            <tr>
+                                <td>-</td>
+                                <td>Substraction</td>
+                            </tr>
+                            <tr>
+                                <td>*</td>
+                                <td>Multiplication</td>
+                            </tr>
+                            <tr>
+                                <td>**</td>
+                                <td>Exponentiation</td>
+                            </tr>
+                            <tr>
+                                <td>/</td>
+                                <td>Division</td>
+                            </tr>
+                            <tr>
+                                <td>%</td>
+                                <td>Modulus (Division Remainder)</td>
+                            </tr>
+                            <tr>
+                                <td>++</td>
+                                <td>Increment</td>
+                            </tr>
+                            <tr>
+                                <td>--</td>
+                                <td>Decrement</td>
+                            </tr>
+                        </table>
+                    </article>    
+                </section>
+                <section class="main-section" id="Variables">
+                    <header>Variables</header>
+                    <article>
+                        <p>JavaScript variables are containers for storing data values.
+
+                            In this example, <code>x</code>, <code>y</code>, and <code>z</code>, are variables:</p>
+                        <p>Example:</p>
+                        <code class="coding">
+                            var x = 5;<br>
+                            var y = 6;<br>
+                            var z = x + y;
+                        </code>
+                        <h4>Using let and const (2015)</h4>
+                        <p>Before 2015, using the var keyword was the only way to declare a JavaScript variable.
+
+                            The 2015 version of JavaScript (ES6 - ECMAScript 2015) allows the use of the const keyword to define a variable that cannot be reassigned, and the let keyword to define a variable with restricted scope.
+                            
+                            Because it is a little complicated to describe the difference between these keywords, and because they are not supported in older browsers, the first part of this tutorial will most often use var.</p>
+                        <p class="cent-link"><a href="https://www.w3schools.com/js/js_variables.asp" target="_blank"><img src="./media-images/icons8-google-web-search-20.png"></a></p>
+                        <div class="video">
+                            <p>A quick video to make the knowledge more interactive: </p>
+                            <iframe id="vid" width="500" height="315" src="https://www.youtube.com/embed/9aGIAL16DL4" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                            <p class="cent-link"><a href="https://www.youtube.com/watch?v=upDLs1sn7g4" target="_blank">Source <img src="./media-images/icons8-google-web-search-20.png"></a></p>
+                        </div>
+                    </article>    
+                </section>
+                <section class="main-section" id="What_do_you_need_to_install?_-_Tools">
+                    <header>What do you need to install? - Tools</header>
+                    <article>
+                    <h3>36 ESSENTIAL JAVASCRIPT TOOLS IN 2019</h3>
+                        <p>JavaScript continues to be the world's most popular programming language. Designing anything on the web requires at least a working knowledge of JS, given the many frameworks and libraries you'll need to interact with. And with its expansion into important new technologies such as blockchain, JS seems set to remain relevant for the foreseeable future.</p>
+                        <p>Even you can pick from a wide range of possibilites, my personal recommendation is:</p>
+                        <ul>
+                            <li><a href="https://code.visualstudio.com/">Visual Studio Code: Microsoft's code editor</a>. According to the Stack Overflow 2018 Developer Survey, Visual Studio Code is the most popular developer environment tool of all (with 34% of respondents using it). It includes support for debugging, Git control, syntax highlighting, code refactoring, and more.</li>
+                            <li><a href="https://gruntjs.com/">Grunt:</a> a JavaScript task runner that automates repetitive tasks like minification, compilation, linting, unit testing, and more. Grunt has a huge ecosystem with over 6,000 plugins.</li>
+                            <li><a href="http://ashkenas.com/docco/">Docco:</a> This is a documentation generator written in Literate CoffeeScript. It generates an HTML document that shows your comments along with your code. All the comments are passed through Markdown and the code is passed through Highlight.js syntax highlighting.</li>
+                            <li><a href="https://www.protractortest.org/">Protractor:</a> an end-to-end test framework for Angular and AngularJS apps. This tool runs tests in a real browser, interacting with your app like an end user would, with native events and browser-specific drivers.</li>
+                        </ul>
+                        <p class="cent-link"><a href="https://x-team.com/blog/essential-javascript-tools-2019/" target="_blank"><img src="./media-images/icons8-google-web-search-20.png"></a></p>
                     </article>    
                 </section>
             </main>
