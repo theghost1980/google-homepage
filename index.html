@@ -2,87 +2,110 @@
 <html>
     <head>
         <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1" />
-        <link rel="stylesheet" href="./styles/sty1.css">
+        <link rel="stylesheet" href="./styles/portfolio.css">
     </head>
     <body>
-        <header>
-            <title>"My Web Learning Path"</title>
-        </header>
-        <div id="mainwrap">
-            <nav>
-                <p><a href="index.html">En</a> | <a href="index-es.html">Es</a></p>
-            </nav>
-            <div id="div-main-img">
-                <img src="./media-images/how-design-thinking-transforming-learning-experience-free-ebook.jpg" class="img-centered">
-            </div>
-            <div class="text-inlines">
-                <p>Programming is a very complex subject these days. In fact, we may learn so many languages, 
-                    frameworks and still, this "industry" evoles so fast, that probably we may stay a bit off the road in a year or two.
-                    But this is not as impossible as it may seems. As you get the basics in programming you can may a better path and just adapt everything you know to learn a new language or framework. This webpage intends to be a CV with all my formation and works about programming. Feel free to contact me anytime.
-                </p>
+        <!-- Script bundle test -->
+        <!-- <script src="https://cdn.freecodecamp.org/testable-projects-fcc/v1/bundle.js"></script> -->
+        <!-- end test -->
+        <div id="main-wrapper">
+            <nav id="navbar">
                 <ul>
-                    <li>FreeCodeCamp <a href="https://freecodecamp.org/" target="_blank"><i>Click here To Visit</i></a></li>
-                    <li>The Odin Project <a href="https://www.theodinproject.com/" target="_blank"><i>Click here To Visit</i></a></li>
+                    <li><a href="#welcome-section">About me</a></li>
+                    <li><a href="#projects">Projects</a></li>
+                    <li><a href="#contact-me">Contact me</a></li>
                 </ul>
-                <p>Click on each image below, to view the completed challenges.</p>
-            </div> 
-            <div id="menu-container">
-                <div class="mini-site">
-                    <a href="tribute-rocco-mangieri.html">
-                        <img src="./media-images/site-1.png" class="mini-img">
-                        <p class="mini-p">1st Assignement: Create a Tribute WebPage</p>
-                    </a>
-                </div>
-                <div class="mini-site">
-                    <a href="form-simple.html">
-                        <img src="./media-images/site-2.png" class="mini-img">
-                        <p class="mini-p">2nd Assignement: Design a Form Page</p>
-                    </a>
-                </div>
-                <div class="mini-site">
-                    <a href="./form-simple-improved.html">
-                        <img src="./media-images/site-3.png" class="mini-img">
-                        <p class="mini-p">Making it better: Design a simple form</p>
-                    </a>
-                </div>
-                <div class="mini-site">
-                    <a href="google-search-easy-first.html">
-                        <img src="./media-images/site-4.png" class="mini-img">
-                        <p class="mini-p">3rd Assignement: Design a Google Search Page</p>
-                    </a>
-                </div>
-                <div class="mini-site">
-                    <a href="google-search-easy.html">
-                        <img src="./media-images/site-5.png" class="mini-img">
-                        <p class="mini-p">Making it better look: Design a Google Search Page</p>
-                    </a>
-                </div>
-                <div class="mini-site">
-                    <a href="./search-challenge-diff.html">
-                        <img src="./media-images/site-6.png" class="mini-img">
-                        <p class="mini-p">4th Assigment: Design a Google Search Results Page</p> 
-                    </a>
-                </div>  
-                <div class="mini-site">
-                    <a href="./guitars-lp.html">
-                        <img src="./media-images/site-7.png" class="mini-img">
-                        <p class="mini-p">5th Assigment: Design a Product Landing Page.</p> 
-                    </a>
-                </div> 
-                <div class="mini-site">
-                    <a href="tech-doc.html">
-                        <img src="./media-images/site-8.png" class="mini-img">
-                        <p class="mini-p">6th Assigment: Design a Technnical documentation page.</p> 
-                    </a>
-                </div> 
-                <!-- <div class="mini-site">
-                    <p>Ipsem Lorem: <a href="">Ipsem Lorem</a></p> 
-                </div>  -->
-            </div>
+            </nav>
+            <main id="main-section">
+                <section id="welcome-section">
+                    <h1 id="title-m">Welcome to my Portfolio</h1>
+                    <h3>Eng. Saturno Mangieri</h3>
+                    <section id="box-text">
+                        <p class="t-margin">One of my main hobbies is programming and self-learning. Actually is not just a hobby but a full time job. As I continue improving my self as a Full-Stack Developer I am learning and practicing the followings:</p>
+                        <ul>
+                            <li>HTML & HTML5</li>
+                            <li>CSS</li>
+                            <li>Javascript</li>
+                            <li>React Native</li>
+                            <li>Ruby on Rails</li>
+                        </ul>
+                        <p class="t-margin">Programming is a very complex subject these days. In fact, we may learn so many languages, 
+                            frameworks and still, this "industry" evoles so fast, that probably we may stay a bit off the road in a year or two.
+                            But this is not as impossible as it may seems. As you get the basics in programming you can may a better path and just adapt everything you know to learn a new language or framework. This webpage intends to be a CV with all my formation and works about programming. Feel free to contact me anytime.
+                        </p>
+                    </section>
+                </section>
+                <section id="projects">
+                    <header class="headers">Projects, assignations and fun</header>
+                    <div id="projects-c">
+                        <div class="project-tile">
+                            <header class="project-h">Tribute Web Page</header>
+                            <p class="description-p">The first web page I did while taking the FCC challenges.</p>
+                            <a href="">
+                            <img src="./media-images/site-1.png" class="img-project" alt="project mini-image" class="img-project">
+                            </a>
+                        </div>
+                        <div class="project-tile">
+                            <header class="project-h">Form Page</header>
+                            <p class="description-p">The second web page I did while taking the FCC challenges. A simple form.</p>
+                            <a href="">
+                            <img src="./media-images/site-2.png" class="img-project" alt="project mini-image" class="img-project">
+                            </a>
+                        </div>
+                        <div class="project-tile">
+                            <header class="project-h">Improved Form Page</header>
+                            <p class="description-p">A simple form but making a better design and CSS stylying.</p>
+                            <a href="">
+                            <img src="./media-images/site-3.png" class="img-project" alt="project mini-image" class="img-project">
+                            </a>
+                        </div>
+                        <div class="project-tile">
+                            <header class="project-h">Google Search Page</header>
+                            <p class="description-p">Another task to design a simple web page site like google.</p>
+                            <a href="">
+                            <img src="./media-images/site-4.png" class="img-project" alt="project mini-image" class="img-project">
+                            </a>
+                        </div>
+                        <div class="project-tile">
+                            <header class="project-h">Google Search Page v2.0</header>
+                            <p class="description-p">Improving the same searching web site.</p>
+                            <a href="">
+                            <img src="./media-images/site-5.png" class="img-project" alt="project mini-image" class="img-project">
+                            </a>
+                        </div>
+                        <div class="project-tile">
+                            <header class="project-h">Google Search Results page</header>
+                            <p class="description-p">Another task to design a search results page as google.</p>
+                            <a href="">
+                            <img src="./media-images/site-6.png" class="img-project" alt="project mini-image" class="img-project">
+                            </a>
+                        </div>
+                        <div class="project-tile">
+                            <header class="project-h">Design a product landing page</header>
+                            <p class="description-p">Task to design a product landing page.</p>
+                            <a href="">
+                            <img src="./media-images/site-7.png" class="img-project" alt="project mini-image" class="img-project">
+                            </a>
+                        </div>
+                        <div class="project-tile">
+                            <header class="project-h">Design a Tecnnical documentation Page</header>
+                            <p class="description-p">Task to design a responsive technnical documentation page.</p>
+                            <a href="">
+                            <img src="./media-images/site-8.png" class="img-project" alt="project mini-image" class="img-project">
+                            </a>
+                        </div>
+                    </div>
+                </section>
+                <section id="contact-me">
+                    <ul>
+                        <li><a href="https://www.freecodecamp.org/fccbae972b2-366a-40b2-b8f1-270a0ba386c4" id="profile-link" target="_blank"><img src="./media-images/fcc-logo.png" class="logos"></a>FCC Profile</li>
+                        <li><a href="https://github.com/theghost1980" target="_blank"><img src="./media-images/github-logo.png" class="logos"></a>GitHub Profile</li>
+                        <li><a href="https://www.linkedin.com/in/saturno-mangieri-011265138/" target="_blank"><img src="./media-images/linkedin-logo.png" class="logos"></a>Linkedin Profile</li>
+                    </ul>
+                </section>
+            </main>
             <footer>
-                <p class="small-text">Designed by <a href="https://github.com/theghost1980">@Theghost1980</a> Saturno Mangieri</p>
-                <p class="small-text">Hosted in <a href="https://github.com/">GitHub</a></p>
-                <p class="small-text">Content credits reflected on CSS file</p>
+                <p>@theghost1980 2020</p>
             </footer>
         </div>
     </body>
