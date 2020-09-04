@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1" />
+        <link rel="stylesheet" href="./styles/clock.css">
+        <script type="text/javascript" src="./js/clock.js"></script>
+    </head>
+    <body>
+        <div id="main-wrapper">
+            <header>
+                <title>A Simple Clock in JS</title>
+            </header>
+            <nav></nav>
+            <header>A simple Clock in Javascript</header>
+            <main>
+                <div id="clock-c">
+                    <div id="hours"><p class="main-text" id="time">11</p></div>
+                </div>
+                <p class="p-centered" id="utc_zone"></p>
+            </main>
+            <footer>
+                <form>
+                <p>Alarm Settings</p>
+                <label for="group-c">Set Time: </label>
+                <div id="group-c">
+                    <label>H: <input type="number" id="hourss" class="inp" minlength="1" maxlength="2"></label>
+                    <label>M: <input type="number" id="minutes" class="inp" minlength="1" maxlength="2"></label>
+                    <label>S: <input type="number" id="seconds" class="inp" minlength="1" maxlength="2"></label>
+                </div>
+                <button type="reset" id="butt" onclick="set_alarm()">Set Alarm</button>
+                <p id="alarm"></p>
+                </form>
+            </footer>
+        </div>
+    </body>
+</html>
