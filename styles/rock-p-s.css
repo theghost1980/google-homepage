@@ -4,6 +4,9 @@ html,body {
 }
 html {
     background: url("../media-images/bg-2.png") no-repeat center fixed;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
     background-size: cover;
     background-color: rgb(6, 82, 82);
 }
@@ -102,5 +105,6 @@ footer a {
     }
     footer p {
         font-size: 0.8em;
+        margin-top: 15px;
     }
 }
