@@ -8,6 +8,7 @@ html {
     -moz-background-size: cover;
     -o-background-size: cover;
     background-size: cover;
+    background-attachment:fixed;
     background-color: rgb(6, 82, 82);
 }
 body {
@@ -78,6 +79,7 @@ footer {
 footer p {
     font-size: 0.9em;
     color: whitesmoke;
+    margin: 2px;
 }
 footer a {
     text-decoration: none;
@@ -104,7 +106,6 @@ footer a {
         max-height: 90%;
     }
     footer p {
-        font-size: 0.8em;
-        margin-top: 15px;
+        font-size: 0.7em;
     }
 }
