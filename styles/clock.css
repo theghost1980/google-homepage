@@ -3,7 +3,7 @@ html,body {
     margin: 0;
     padding: 0;
   }
-html {
+html,body {
     background: url("../media-images/bg-1.png") no-repeat center fixed;
     background-size: cover;
 }
@@ -65,5 +65,11 @@ form {
 @media (max-width: 600px){
     main {
         width: 300px;
+    }
+    header {
+        display: flex;
+        justify-content: center;
+        margin-top: 55px;
+        font-size: 1.5em;
     }
 }
