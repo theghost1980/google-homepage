@@ -185,8 +185,8 @@ footer {
         max-height: 40px;
     }
     .project-tile {
-        max-width: 70%;
-        max-height: 70%;
+        width: 60%;
+        height: 80%;
     }
     .project-h {
         font-size: 1.1em;
