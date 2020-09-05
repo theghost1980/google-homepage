@@ -1,0 +1,106 @@
+html,body {
+    margin:0;
+    padding: 0;
+}
+html {
+    background: url("../media-images/bg-2.png") no-repeat center fixed;
+    background-size: cover;
+    background-color: rgb(6, 82, 82);
+}
+body {
+    font-family: monospace;
+}
+main {
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    top: 0;
+    right: 0;
+    left: 0;
+    bottom: 0;
+    width: 500px;
+    height: 500px;
+    margin: auto;
+    background-color: rgba(54, 209, 170, 0.541);
+    text-align: center;
+    border-radius: 10px;
+    
+}
+header {
+    font-size: 2em;
+}
+#board {
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    justify-content: space-evenly;
+}
+.options {
+    border: 1px solid rgb(28, 94, 79);
+    border-radius: 10px;
+    background-color: whitesmoke;
+}
+#results {
+    color: tomato;
+    font-size: 1.4em;
+}
+#controls {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 50%;
+    align-items: center;
+    margin: 0 auto;
+}
+table {
+    table-layout: fixed;
+    width: 100%;
+}
+table th {
+    background-color: wheat;
+}
+table td {
+    background-color: rgb(247, 247, 247);
+}
+footer {
+    display: flex;
+    flex-direction: column;
+    position: fixed;
+    bottom: 0;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    text-align: center;
+}
+footer p {
+    font-size: 0.9em;
+    color: whitesmoke;
+}
+footer a {
+    text-decoration: none;
+    color: wheat;
+}
+#t_counters {
+    table-layout: fixed;
+    width: 50%;
+}
+/* Media rules */
+@media (max-width: 600px){
+    main {
+        /* position: relative; */
+        max-width: 90%;
+        max-height: 80%;
+        margin: auto;
+    }
+    header {
+        font-size: 1.5em;
+        margin-top: 10px;
+    }
+    .options {
+        max-width: 90%;
+        max-height: 90%;
+    }
+    footer p {
+        font-size: 0.8em;
+    }
+}

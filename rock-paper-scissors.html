@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1" />
+        <link rel="stylesheet" href="./styles/rock-p-s.css">
+        <script type="text/javascript" src="./js/rock-p-s.js"></script>
+    </head>
+    <body>
+        <div id="main-wrapper">
+
+            <main>
+                <header>Rock Paper Scissors Game</header>
+                <h3>Instructions</h3>
+                <p>Just pick one option and let the computer beat you up. To start a new game, just click "new".</p>
+                <div id="board">
+                    <a href="#" onclick="choose('rock'); return false;" title="Choosing Rock!"><img src="./media-images/rock.png" id="rock" class="options"></a>
+                    <a href="#" onclick="choose('paper'); return false;" title="Choosing Paper!"><img src="./media-images/paper.png" id="paper" class="options"></a>
+                    <a href="#" onclick="choose('scissor'); return false;" title="Choosing Scissor!"><img src="./media-images/scissors.png" id="scissor" class="options"></a>
+                </div>
+                <p id="results">|=|=|=|=|=|=|=|</p>
+                <div id="controls">
+                    <input type="button" id="reset-game" value="New Game" onclick="reset_all();">
+                    <table>
+                        <tr>
+                            <th>Player</th>
+                            <th>Computer</th>
+                        </tr>
+                        <tr >
+                            <td id="p_r1"></td>
+                            <td id="c_r1"></td>
+                        </tr>
+                        <tr>
+                            <td id="p_r2"></td>
+                            <td id="c_r2"></td>
+                        </tr>
+                        <tr>
+                            <td id="p_r3"></td>
+                            <td id="c_r3"></td>
+                        </tr>
+                    </table>
+                    <table id="t_counters">
+                        <tr>
+                            <th id="cont_p"></th>
+                            <th id="cont_c"></th>
+                        </tr>
+                    </table>
+                </div>
+            </main>
+            <footer>
+                <p>Part of my Exercises of <a href="https://www.theodinproject.com/courses/web-development-101/lessons/rock-paper-scissors?ref=lnav">The Project Odin Lessons</a></p>
+                <p><a href="https://github.com/theghost1980">@theghost1980</a> - 2020</p>
+            </footer>
+        </div>
+    </body>
+</html>
