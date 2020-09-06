@@ -2,7 +2,7 @@
 let gh = 0;
 let gm = 0;
 let gs = 0;
-var myAudio= new Audio('/media-images/alarm.wav');
+var myAudio= new Audio('../media-images/alarm.wav');
 
 function play() {
     myAudio.play();

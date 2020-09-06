@@ -1,25 +1,15 @@
 
-main {
-        width: 300px;
-    }
-header {
-        display: flex;
-        justify-content: center;
-        margin-top: 55px;
-        font-size: 1.5em;
-    }
-/* Media Rules */
-@media (min-width: 600px){
 html,body {
     margin: 0;
     padding: 0;
-  }
+}
 html {
     background: url('../images/bg-1.png') center center fixed; 
     -webkit-background-size: cover;
     -moz-background-size: cover;
     -o-background-size: cover;
     background-size: cover;
+    background-color: rgb(192, 84, 41);
 }
 main {
     position: absolute;
@@ -75,5 +65,17 @@ form {
 #butt {
     margin-top: 10px;
 }
+@media (max-width: 600px){  
+main {
+        width: 300px;
+    }
+header {
+        display: flex;
+        justify-content: center;
+        margin-top: 55px;
+        font-size: 1.5em;
+    }
 }
+
+
 
