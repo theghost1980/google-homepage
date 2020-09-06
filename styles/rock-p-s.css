@@ -3,12 +3,11 @@ html,body {
     padding: 0;
 }
 html {
-    background: url("../media-images/bg-2.png") no-repeat center fixed;
-    -webkit-background-size: cover;
-    -moz-background-size: cover;
-    -o-background-size: cover;
-    background-size: cover;
+    background: url(/media-images/bg-2.png);
+    background-position: center center;
+    background-repeat: no-repeat;
     background-attachment:fixed;
+    background-size: cover;
     background-color: rgb(6, 82, 82);
 }
 body {
@@ -25,7 +24,7 @@ main {
     width: 500px;
     height: 500px;
     margin: auto;
-    background-color: rgba(54, 209, 170, 0.541);
+    background-color: rgb(234, 250, 212);
     text-align: center;
     border-radius: 10px;
     
