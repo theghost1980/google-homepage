@@ -8,7 +8,6 @@ function play() {
     // myAudio.play();
     document.getElementById('audio').play();
 }
-
 function set_vars(h, m, s){
     gh = h;
     gm = m;
@@ -24,8 +23,8 @@ function check_alarm(){
     let s = dat.getSeconds();
     if (gh == h && gm == m && gs == s){
         //we play the alarm sound and set the alarm to 0
-        play();
         set_vars(0,0,0);
+        play();
     }
 }
 

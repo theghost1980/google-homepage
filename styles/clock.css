@@ -75,6 +75,10 @@ header {
         margin-top: 55px;
         font-size: 1.5em;
     }
+    #utc_zone {
+        font-size: 0.8em;
+        overflow-x: auto;
+    }
 }
 
 
