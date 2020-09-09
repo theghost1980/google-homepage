@@ -41,7 +41,7 @@ function create_board(n){
     const p = document.createElement("p");
     const menu = document.createElement("div");
     //bg image for html element
-    html.style = "background: url('../media-images/bg-sketch.jpeg');background-position: center center; background-repeat: no-repeat;background-attachment:fixed;background-size: cover;background-color: rgb(0, 0, 0);";
+    html.style = "background: url('./media-images/bg-sketch.jpeg');background-position: center center; background-repeat: no-repeat;background-attachment:fixed;background-size: cover;background-color: rgb(0, 0, 0);";
     
     //shadows
     //definying the div as flex with wrap option
