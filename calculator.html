@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1" />
+        <title>Calculator v1.0</title>
+        <link rel="stylesheet" href="./styles/calculator.css">
+        <script type="text/javascript" src="./js/calculator.js" defer></script>
+    </head>
+    <body>
+        <div id="calculator-c">
+            <div class="display">
+                <div id="line-top">
+                    <p id="top-text" class="top-t"></p>
+                </div>
+                <div id="line-main">    
+                    <p id="main-text" class="main-t"></p>
+                </div>
+            </div>
+            <div class="num-c">
+                <button class="btn" id="1" onclick="press()">1</button>
+                <button class="btn" id="2" onclick="press()">2</button>
+                <button class="btn" id="3" onclick="press()">3</button>
+                <button class="btn" id="+" onclick="press()">+</button>
+                <button class="btn" id="4" onclick="press()">4</button>
+                <button class="btn" id="5" onclick="press()">5</button>
+                <button class="btn" id="6" onclick="press()">6</button>
+                <button class="btn" id="*" onclick="press()">*</button>
+                <button class="btn" id="7" onclick="press()">7</button>
+                <button class="btn" id="8" onclick="press()">8</button>
+                <button class="btn" id="9" onclick="press()">9</button>
+                <button class="btn" id="/" onclick="press()">/</button>
+                <button class="btn" id="c" onclick="press()">C</button>
+                <button class="btn" id="0" onclick="press()">0</button>
+                <button class="btn" id="=" onclick="press()">=</button>
+                <button class="btn" id="-" onclick="press()">-</button>
+            </div>
+        </div>
+        <footer>
+            <p class="time-d"></p>
+            <p>@theghost1980 As part of <a href="https://www.theodinproject.com/courses/web-development-101/lessons/calculator?ref=lnav" target="_blank">The Odin Project Course</a>.</p>
+            <p><a href="index.html">Back to Index</a></p>
+        </footer>
+    </body>
+</html>
