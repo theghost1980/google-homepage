@@ -2,11 +2,15 @@
     font-family: "Bitstream Vera Serif Bold";
     src: url("http://developer.mozilla.org/@api/deki/files/2934/=VeraSeBd.ttf");
   } */
+  /* Other credits */
+  /* Cristina */
+  /* https://www.pexels.com/es-es/@divinetechygirl?utm_content=attributionCopyText&utm_medium=referral&utm_source=pexels */
 body {
     margin: 0;
     padding: 0;
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    background-image: radial-gradient(rgb(15, 12, 43), rgb(61, 18, 55), rgb(235, 206, 43));
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    /* background-image: radial-gradient(rgb(15, 12, 43), rgb(61, 18, 55), rgb(235, 206, 43)); */
+    background-color: #4D6E7A;
 }
 body a {
     text-decoration: none;
@@ -14,12 +18,11 @@ body a {
 }
 nav {
     height: 60px;
-    background-color: #662E14;
+    background-color: #28637A;
     position: fixed;
     top: 0;
     width: 100%;
     z-index: 1;
-    /* color:white; */
 }
 nav ul {
     list-style: none;
@@ -27,23 +30,23 @@ nav ul {
     flex-direction: row;
     justify-content: center;
 }
-nav ul li {
-    margin-right: 2em;
-    font-size: 1.7em;
+nav ul > li {
+    font-size: 1.6em;
+    padding-right: 2em;
+    font-weight: bolder;
 }
-/* main {
-    position: relative;
-    display: flex;
-    flex-direction: column;
-    top: 80px;
-    justify-content: center;
-    align-content: center;
-    width: 100%;
-    margin: auto;
-} */
 #title-m {
-    font-size: 2.5em;
-    text-shadow:  2px 3px rgb(5, 4, 4);
+    position: relative;
+    font-size: 1.4em;
+    font-weight: bold;
+    /* text-shadow:  2px 3px rgb(46, 39, 39); */
+}
+.mini-p {
+    color: rgb(43, 65, 73);
+    font-size: 0.7em;
+}
+.mini-p a {
+    color: rgb(43, 65, 73);
 }
 #welcome-section {
     display: flex;
@@ -56,37 +59,54 @@ nav ul li {
     color: white;
 }
 #box-text {
-    width: 700px;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    /* justify-content: center; */
+    margin: auto;
+    background-color: rgb(217, 229, 235);
+    /* border-radius: 5px; */
+    color: rgb(43, 65, 73);
+    margin-top: 50px;
+}
+#main-img-c {
+    width: 50%; 
+}
+.img-main {
+    width: 85%;
+    height: 85%;
+    border-radius: 10px;
+}
+#text-c {
+    width: 50%;
     display: flex;
     flex-direction: column;
-    margin: 0 auto;
-    text-align: justify;
-    background-color: rgb(247, 200, 178);
-    border-radius: 5px;
-    color: #662E14;
-}
-#box-text ul {
-    list-style: none;
-    text-align: center;
-    padding: 0;
+    padding: 2em;
+    line-height: 1.6em;
 }
 .t-margin {
-    margin-top: 30px;
-    margin-left: 30px;
-    margin-right: 30px;
-    margin-bottom: 30px;
+    text-align: justify;
+}
+.list {
+    text-align: start;
+    list-style-type: circle;
 }
 .headers {
     font-size: 1.7em;
     text-align: center;
     margin-bottom: 20px;
     color: white;
-    text-shadow:  2px 2px #662E14;
+    font-weight: bold;
+    /* text-shadow:  2px 2px #662E14; */
 }
 #projects {
     padding-top: 60px;
 }
 #projects-c {
+    padding-top: 2em;
+    /* margin-left: 10px; */
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
@@ -99,86 +119,119 @@ nav ul li {
     justify-content: space-between;
     align-content: center;
     text-align: center;
-    width: 300px;
-    height: 450px;
-    border: 2px solid #E6520E;
+    width: 230px;
+    height: 340px;
+    border: 2px solid #28637A; 
     border-radius: 5px;
-    background-color: #8d4a2b75;
-    margin-left: 10px;
-    margin-bottom: 20px;
-    color: white;
+    background-color: rgb(202, 226, 236);
+    /* margin-left: 2em; */
+    margin-bottom: 2em;
+    color: rgb(29, 29, 29);
+}
+.p_img_c {
+    width: 230px;
+    height: 240px;
+    margin: auto;
 }
 .img-project {
     display: block;
-    max-width: 100%;
-    max-height: 100%;
-    border-top: 1px solid black;
+    width: 100%;
+    height: 100%;
 }
 .project-h {
-    font-size: 1.3em;
-    margin-top: 10px;
+    font-size: 1.1em;
+    margin-top: 5px;
+    font-weight: bold;
 }
 .description-p {
     margin-left: 2px;
     margin-right: 2px;
+    font-size: 0.8em;
+    font-weight: lighter;
 }
 #contact-me {
-    /* text-align: center; */
-    color:whitesmoke;
+    margin-top: 3em;
     width: 100%;
+    height: 150px;
+    background-image: linear-gradient(rgb(139, 200, 224),#28637A);
 }
 #contact-me ul {
+    position: relative;
+    padding-top: 2em;
     list-style: none;
     display: flex;
     flex-direction: row;
     justify-content: center;
-
 }
 #contact-me ul li {
-    padding: 2rem;
+    position: relative;
+    padding-right: 2em;
     display: flex;
     flex-direction: column;
     font-size: 0.8em;
 }
+/* #bg-contact {
+    background-image: linear-gradient(#9EE0FB,#28637A);
+    height: auto;
+} */
 .logos {
-    max-width: 100px;
-    max-height: 100px;
+    width: 100px;
+    height: 100px;
 }
 footer {
     display: flex;
     flex-direction: row;
     justify-content: center;
     height: 3rem;
-    max-width: 100%;
-    background-color: #662E14;
-    color: whitesmoke;
+    width: 100%;
+    background-color: #28637A;
+    color: rgb(180, 176, 176);
+    font-size: 0.8em;
 }
 /* Media rules */
 @media (max-width:600px) {
+    nav {
+        height: 50px;
+    }
     #welcome-section {
-        top: 60px;
         position: relative;
-        width: auto;
+        width: 100%;
         height: auto;
     }
     nav ul li {
         margin-right: 2em;
         font-size: 0.8em;
     }
+    #box-text {
+        flex-wrap: wrap;
+    }
+    #main-img-c {
+        /* display: none;  */
+        width: 100%;
+    }
+    .img-main {
+        width: 50%;
+        height: 200px;
+        border-radius: 10px;
+    }
+    #text-c {
+        width: 100%;
+    }
     #title-m {
-        font-size: 1.3em;
-        text-shadow:  2px 3px #662E14;
+        font-size: 1.1em;
+    }
+    .t-margin {
+        font-size: 0.8em;
     }
     .headers {
-        font-size: 1.3em;
-        margin-top: 10px;
+        font-size: 1.2em;
     }
-    #box-text {
-        width: 95%;
-        font-size: 0.9em;
+    .p_img_c {
+        width: 192px;
+        height: 180px;
     }
-    #contact-me ul {
-        width: 80%;
+    #contact-me {
+        height: 90px;
     }
     .logos {
         max-width: 40px;
