@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1" />
+        <link rel="stylesheet" href="./styles/youtube.css">
+        <script type="text/javascript" src="./js/youtube.js" defer></script>
+        <title>YouTube Video Player v1.0</title>
+    </head>
+    <body>
+        <!-- Special div to cover the whole page while menu active -->
+        <div id="black-div" onclick="show_menu()">
+        </div>
+        <!-- end special div to cover black all page -->
+        <!-- Special section as the menu on teh left side -->
+        <section id="menu-float-r">
+            <div id="m-r-float">
+                    <img src="./media-images/menu.png" class="img-menu2" onmouseover="showCoords(event)" onmouseout="hideText(event)" id="menu" alt="Menu Options" onclick="show_menu()">
+                    <img src="./media-images/youtube-logo.png" class="img-logo2" >
+            </div>
+            <div id="menu-section1">Menu Section 1</div>
+            <div id="menu-section2">Menu Section 2 and so on...</div>
+        </section>
+        <!-- end of special section -->
+        <section id="nav">
+            <div id="nav-bar">
+                <div id="menu-r">
+                    <img src="./media-images/menu.png" class="img-menu" onmouseover="showCoords(event)" onmouseout="hideText(event)" id="menu" alt="Menu Options" onclick="show_menu()">
+                    <img src="./media-images/youtube-logo.png" class="img-logo" >
+                </div>
+                <div id="search-bar">
+                    <input type="text" id="search_box">
+                    <input type="button" id="search-btn" onmouseover="showCoords(event)" onmouseout="hideText(event)" alt="Search">
+                </div>
+                <div id="menu-l">
+                    <img src="./media-images/video-icon.png" class="img-logo" onmouseover="showCoords(event)" onmouseout="hideText(event)" id="ic-video" alt="Create a Video!">
+                    <img src="./media-images/menu-left.png" class="img-menu" onmouseover="showCoords(event)" onmouseout="hideText(event)" id="ic-menu" alt="Menu Options">
+                    <img src="./media-images/bell-icon.png" class="img-menu" onmouseover="showCoords(event)" onmouseout="hideText(event)" id="ic-alarm" alt="Notifications">
+                    <img src="./media-images/profile-pic.jpeg" class="img-round" onmouseover="showCoords(event)" onmouseout="hideText(event)" id="ic-profile" alt="Profile">
+                </div>
+            </div>
+        </section>
+        <section id="content">
+            <!-- Inside we have 2 sections. The player column + the related column
+            where player-column is grow 2.5 -->
+            <div id="player-column">
+                <!-- Iframe for video -->
+                <iframe id="i-frame" width="560" height="315" src="https://www.youtube.com/embed/CQQhmahh4cU" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                <!-- end Iframe -->
+                <div id="title-menu">
+                    <p id="title">Soulful House Mix</p>
+                    <div id="data-song-menu">
+                        <div id="data-left">
+                            <p id="data-left-content">3.106.771 visualisations - Jan 3 2014</p>
+                        </div>
+                        <div id="menu-data">
+                            <div class="row">
+                                <p><img src="./media-images/google-thumb.png" class="img-data" onmouseover="showCoords(event)" onmouseout="hideText(event)" id="ic-like" alt="I Like This!">21.921</p>
+                            </div>
+                            <div class="row">
+                                <p><img src="./media-images/google-thumb.png" class="img-data" onmouseover="showCoords(event)" onmouseout="hideText(event)" id="ic-dislike" alt="Don't Like.">921</p>
+                            </div>
+                            <div class="row">
+                                <p><img src="./media-images/arrow.png" class="img-data" onmouseover="showCoords(event)" onmouseout="hideText(event)" id="ic-share" alt="Share it!">SHARE</p>
+                            </div>
+                            <div class="row">
+                                <p><img src="./media-images/menu2.png" class="img-data" onmouseover="showCoords(event)" onmouseout="hideText(event)" id="ic-save" alt="Save">SAVE</p>
+                            </div>
+                            <div class="row">
+                                <p><img src="./media-images/more.png" class="img-data" onmouseover="showCoords(event)" onmouseout="hideText(event)" id="ic-more" alt="More Options"></p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- HR element -->
+                <hr>
+                <!-- Logo youtube channel in flex of 2 rows -->
+                <div id="last-section">
+                    <div id="song-profile">
+                        <div id="img-profile-c">
+                            <img src="./media-images/profile-pic.jpeg" class="img-profile-song">
+                        </div>
+                        <div id="info-song">
+                            <div id="channel-info-c">
+                                <div id="channel-data">
+                                    <p id="channel-name">Cafe Music BGM channel</p>
+                                    <p id="channel-s">2,47 M subscribers</p>
+                                </div>
+                                <input type="button" id="btn-subscribe" value="SUBSCRIBE">
+                            </div>
+                            <div id="data-song">
+                                <p>Please Subscribe!
+                                    https://www.youtube.com/user/cafemusi...
+                                    
+                                    📝 Music For Business「BGMC Station」
+                                    English: https://bgmc-station.com/en/
+                                    JAPANESE: https://bgmc-station.com
+                                    繁體中文: https://bgmc-station.com/tc/
+                                    Español: https://bgmc-station.com/es/
+                                    한국어: https://bgmc-station.com/ko/
+                                    You can use this music at your restaurants, shops, hospitals, offices, part­ies, etc..
+                                    Try free for 14 days.
+                                    
+                                    💿 New Release 〜 Streaming Service & Buy Music 〜
+                                    If you listen to this music on Streaming Services, please use Shazam to find out if the music has been released.
+                                    * If you can't find the music, even if you use Shazam, the music is not released at the store. Sorry.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                    <input type="button" id="show-more" value="SHOW MORE" onclick="toogle_view()">
+                </div>
+                <hr>
+                <!-- Comment section -->
+                <div id="comments-section">
+
+                </div>
+                <!-- end comment section -->
+            </div>
+            <div id="related-videos">
+                <!-- Let us display the ad in real time loading from any api outthere -->
+                <div id="ad">
+                    <img src="" alt="Adversiting" id="img-ad">
+                </div>
+                <!-- the auto feature -->
+                <div id="auto-c">
+                    <div>Next</div>
+                    <div>
+                        <label for="switch">Automatic Play</label>
+                        <input type="checkbox" id="switch">
+                    </div>
+                </div>
+                <!-- let us show the related videos as an array, indexing them in js -->
+                <div class="related">
+                    <div id="mini-iframe-div">
+                        <!-- Iframe for video -->
+                        <iframe id="mini-iframe" width="200" height="150" src="https://www.youtube.com/embed/CQQhmahh4cU" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                        <!-- end Iframe -->
+                    </div>
+                    </iframe>
+                    <div class="info-related">
+                        <p id="title-s" class="title-t">Soulful House Mix - 30 best house songs ever!</p>
+                        <p id="channel-n" class="small-t">Cafe Music BGM Channel</p>
+                        <p id="views" class="small-t">3.106.771 visualisations</p>
+                    </div>
+                </div>
+                <!-- line sep -->
+                <hr>
+                <div class="related">
+                    <div id="mini-iframe-div">
+                        <!-- Iframe for video -->
+                        <iframe id="mini-iframe" width="200" height="150" src="https://www.youtube.com/embed/CQQhmahh4cU" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                        <!-- end Iframe -->
+                    </div>
+                    </iframe>
+                    <div class="info-related">
+                        <p id="title-s" class="title-t">Soulful House Mix - 30 best house songs ever!</p>
+                        <p id="channel-n" class="small-t">Cafe Music BGM Channel</p>
+                        <p id="views" class="small-t">3.106.771 visualisations</p>
+                    </div>
+                </div>
+                <div class="related">
+                    <div id="mini-iframe-div">
+                        <!-- Iframe for video -->
+                        <iframe id="mini-iframe" width="200" height="150" src="https://www.youtube.com/embed/CQQhmahh4cU" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                        <!-- end Iframe -->
+                    </div>
+                    </iframe>
+                    <div class="info-related">
+                        <p id="title-s" class="title-t">Soulful House Mix - 30 best house songs ever!</p>
+                        <p id="channel-n" class="small-t">Cafe Music BGM Channel</p>
+                        <p id="views" class="small-t">3.106.771 visualisations</p>
+                    </div>
+                </div>
+                <div class="related">
+                    <div id="mini-iframe-div">
+                        <!-- Iframe for video -->
+                        <iframe id="mini-iframe" width="200" height="150" src="https://www.youtube.com/embed/CQQhmahh4cU" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                        <!-- end Iframe -->
+                    </div>
+                    </iframe>
+                    <div class="info-related">
+                        <p id="title-s" class="title-t">Soulful House Mix - 30 best house songs ever!</p>
+                        <p id="channel-n" class="small-t">Cafe Music BGM Channel</p>
+                        <p id="views" class="small-t">3.106.771 visualisations</p>
+                    </div>
+                </div>
+                <div class="related">
+                    <div id="mini-iframe-div">
+                        <!-- Iframe for video -->
+                        <iframe id="mini-iframe" width="200" height="150" src="https://www.youtube.com/embed/CQQhmahh4cU" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                        <!-- end Iframe -->
+                    </div>
+                    </iframe>
+                    <div class="info-related">
+                        <p id="title-s" class="title-t">Soulful House Mix - 30 best house songs ever!</p>
+                        <p id="channel-n" class="small-t">Cafe Music BGM Channel</p>
+                        <p id="views" class="small-t">3.106.771 visualisations</p>
+                    </div>
+                </div>
+                
+            </div>
+        </section>
+        <!-- special div for popup texts -->
+        <div id="floating-text"></div>
+    </body>
+</html>
