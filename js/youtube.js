@@ -18,7 +18,7 @@ function show_menu(){
 function load_ad(){
   //random
   let n = getRndInteger(1,11);
-  let fileName = "../media-images/ads/ad" + n + ".png";
+  let fileName = "./media-images/ads/ad" + n + ".png";
   img_ad.setAttribute("src",fileName);
 }
 function getRndInteger(min, max) {
