@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <link rel="stylesheet" href="./styles/intuit-form.css">
+        <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1"/>
+        <script type="text/javascript" src="./js/intuit-form.js" defer></script>
+        <title>Intuit Form Clone</title>
+    </head>
+    <body id="body">
+        <section id="container">
+            <div id="top">
+                <div id="top-menu">
+                    <div>
+                        <p class="extra-mini space">Already have an Intuit account</p>
+                        <p class="extra-mini space"><a href="https://accounts.intuit.com/signup.html?offering_id=Intuit.ifs.mint&namespace_id=50000026&redirect_url=https%3A%2F%2Fmint.intuit.com%2Foverview.event%3Futm_medium%3Ddirect%26cta%3Dmodule_sign_up%26ivid%3D9d490a2b-d41f-4cbb-96e9-1b3020985fc4%26adobe_mc%3DMCORGID%253D969430F0543F253D0A4C98C6%252540AdobeOrg%257CTS%253D1600214866%26ivid%3D9d490a2b-d41f-4cbb-96e9-1b3020985fc4#" class="no-under-blue">I forgot my User ID or password</a></p>
+                    </div>
+                    <button type="submit" id="btn-signin">
+                        <div class="btn-c">
+                            <img src="./media-images/white-lock.png" class="img-btn">
+                            <p class="extra-mini">Sign In</p>
+                        </div>
+                    </button>
+                </div>
+            </div>
+            <div id="content">
+                <div id="logo">
+                    <div id="logo-c">
+                        <img src="./media-images/intuit-logo.png" class="logo">
+                    </div>    
+                </div>
+                <div id="links">
+                    <div id="img-cont-1">
+                        <img src="./media-images/mint-logo.png" class="img-link1">
+                        <img src="./media-images/quick-logo.png" class="img-link2">
+                        <img src="./media-images/turbo-logo.png" class="img-link3">
+                    </div>
+                    <!-- <div id="img-cont-2">
+                        <img src="./media-images/quick-logo.png" class="img-link">
+                    </div>
+                    <div id="img-cont-3">
+                        <img src="./media-images/turbo-logo.png" class="img-link">
+                    </div> -->
+                </div>
+                <div id="form-c">
+                    <form>
+                        <p class="t-title">Create an Intuit account</p>
+                        <p class="no-bottom-space">One account for everything Intuit, including Mint.</p>
+                        <p class="extra-mini no-space"><a href="https://accounts-help.lc.intuit.com/questions/1582580-creating-an-account" class="no-under-blue">Learn More</a></p>
+                        <fieldset id="label-email">
+                            <label for="email" class="left">Email address</label>
+                            <input type="email" id="email" class="i-text textEvent" alt="You'll use this as your User ID">
+                        </fieldset>
+                        <fieldset id="label-phone">
+                            <label for="phone" class="left">Phone (recommended)</label>
+                            <input type="number" id="phone" class="i-text textEvent" alt="We strongly recommend adding a phone number. This will help verify your account and keep it safe.">
+                        </fieldset>
+                        <!-- <fieldset id="label-verify"> -->
+                            <p class="left" style="margin-left: 30px;">
+                            <input type="checkbox" id="verify" checked />
+                            <label for="verify">Phone (recommended)</label>
+                            </p>
+                        <!-- </fieldset> -->
+                        <fieldset id="label-password">
+                            <label for="password" class="left">Password</label>
+                            <input type="password" id="password" class="i-text textEvent" alt="Use 6 or more characters and no spaces. A strong password includes capital letters, numbers, and symbols.">
+                        </fieldset>
+                        <fieldset id="label-confirm-password">
+                            <label for="confirm-password" class="left">Confirm password</label>
+                            <input type="password" id="confirm-password" class="i-text">
+                        </fieldset>
+                        <button type="submit" id="btn-create">
+                            <div class="btn-c">
+                                <img src="./media-images/white-lock.png" class="img-btn">
+                                <p>Create Account</p>
+                            </div>
+                        </button>
+                    </form>
+                    <p class="italic-t">By clicking Create account, you agree to our Terms and have read and acknowledge our Privacy Statement.</p>
+                    <div id="last-text-c">    
+                        <p class="mini-text" id="middle-p">Invisible reCAPTCHA by Google Privacy Policy and Terms of Use.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <footer>
+            <ul>
+                <li>Legal</li>
+                <li>Privacy</li>
+                <li>Security</li>
+            </ul>
+            <p class="mini-text">© 2020 Intuit, Inc. All rights reserved. Intuit, QuickBooks, QB, TurboTax, ProConnect and Mint are registered trademarks of Intuit Inc.</p>
+            <p class="mini-text">Terms and conditions, features, support, pricing, and service options subject to change without notice.</p>
+        </footer>
+        <div id="privacy">
+            <p class="mini-t">Privacy Settings</p>
+        </div>
+        <!-- overlay box -->
+        <div id="overlay-box">
+            <p>Privacy Settings</p>
+            <p>We provide you with a way to opt-out of advertising activities on our websites</p>
+            <hr>
+            <div>
+                <input type="checkbox">
+                <div>
+                    <p>Third Party Advertising Vendors</p>
+                    <p>We leverage outside service providers who assist us with our marketing and advertising activities. Note: by opting-out of this tracking, you may still see Intuit advertisements, but they may not be tailored to your interests.</p>
+                </div>
+            </div>
+            <div>
+                <button type="button" onclick="show_div()">Dismiss</button>
+                <button type="button" onclick="show_div()">Save</button>
+            </div>
+        </div>
+        <!-- end overlay box -->
+        <!-- Div for messages initially hidden -->
+        <div id="message-c">
+            <p id="message-p">Initial Test Message!</p>
+        </div>
+        <!-- end div -->
+    </body>
+</html>

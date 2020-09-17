@@ -272,6 +272,9 @@ html {
     background-color: rgb(130, 171, 248);
     text-align: center;
 }
+.t-just {
+    text-align: justify;
+}
 /* black div that covers all the rest of the page */
 #black-div {
     display: none;

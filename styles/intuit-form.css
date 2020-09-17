@@ -1,0 +1,344 @@
+/* global vars */
+:root {
+    --display-div: none;
+}
+html,body {
+    margin: 0px;
+    padding: 0px;
+}
+body {
+    background-color: #ECEEF1;
+    font-family: "AvenirNext", Avenir, "Helvetica Neue", Helvetica, Arial, sans-serif;
+    color: #4C4C4C;
+    z-index: 0;
+}
+#container {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+#top {
+    /* border: 1px solid blue; */
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+    width: 100%;
+    height: 50px;
+}
+#top-menu {
+    /* border: 1px solid blue; */
+    width: 300px;
+    height: 100%;
+    display: flex;
+    flex-direction: row;
+}
+#content {
+    /* border: 1px solid blue; */
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    justify-content: center;
+    text-align: center;
+    margin: auto;
+}
+#logo {
+    /* border: 1px solid blue; */
+    display: flex;
+    flex-direction: column;
+    width: 400px;
+    height: 60px;
+    margin: auto;
+    /* background-color: white; */
+}
+#logo-c {
+    width: 120px;
+    height: 35px;
+    margin: auto;
+}
+#img-cont-1 {
+    display: flex;
+    flex-direction: row;
+    /* width: 70px;
+    height: 20px; */
+    /* top r b l */
+    margin:  auto;
+}
+#img-cont-2 {
+    width: 120px;
+    height: 20px;
+    margin: auto;
+}
+#img-cont-3 {
+    width: 100px;
+    height: 20px;
+    margin: auto;
+}
+#links {
+    /* border: 1px solid blue; */
+    display: flex;
+    flex-direction: row;
+    height: 40px;
+    width: 400px;
+    margin: auto;
+    /* background-color: white; */
+}
+#links  div {
+    padding: 0px;
+}
+input[type="checkbox"]:checked {
+    background: #fff;
+    color: rgb(41, 144, 240);
+}
+/* Special div for messages */
+#message-c {
+    /* chanhing to flex in js */
+    display: none;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    top:10px;
+    left: 10px;
+    width: 200px;
+    height: auto;
+    margin: auto;
+    background-color: #323232;
+    border-radius: 4px;
+}
+#message-p {
+    font-size: 0.7em;
+    color: white;
+    padding-left: 5px;
+    padding-right: 5px;
+    text-align: justify;
+}
+/* end special div */
+
+/* Texts */
+.extra-mini {
+    font-size: 0.8em;
+}
+.t-title {
+    font-size: 1.6em;
+}
+.space {
+    line-height: 4px;
+}
+.no-space {
+    line-height: 0px;
+    padding: 0px;
+    margin: 0px;
+}
+.no-bottom-space {
+    margin-bottom: 8px;
+}
+.mini-text {
+    font-size: 0.8em;
+}
+#middle-p {
+    text-align: center;
+    vertical-align: middle;
+    display: table-cell;
+    font-weight: lighter;
+}
+.italic-t {
+    font-style: italic;
+    font-size: 0.8em;
+    padding: 25px;
+}
+.no-under-blue {
+    text-decoration: none;
+    color: rgb(4, 83, 136);
+}
+.i-text:focus {
+    border: none;
+    box-shadow: 0px 0px 10px 1px #0077C5;
+}
+/* end texts */
+#form-c {
+    /* border: 1px solid blue; */
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    width: 400px;
+    margin: auto;
+    background-color: white;
+    border: 1px solid rgb(117, 117, 117);
+}
+#form-c .i-text {
+    width: 90%;
+    height: 25px;
+}
+#last-text-c {
+    display: table;
+    width: 100%;
+    height: 60px;
+    background-color: rgb(216, 214, 214);
+}
+.left {
+    text-align: left;
+}
+#privacy {
+    /* border: 1px solid blue; */
+    position: fixed;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    text-align: center;
+    width: 130px;
+    height: 50px;
+    bottom: 0px;
+    right: 5%;
+    margin: auto;
+    background-color: #5e5c5c;
+    border-radius: 3px;
+    color: white;
+    z-index: 3;
+}
+footer {
+    /* border: 1px solid blue; */
+    padding-top: 30px;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    width: 100%;
+    height: 60px;
+    margin: auto;
+}
+footer ul {
+    display: flex;
+    flex-direction: row;
+    margin: auto;
+}
+footer ul li {
+    list-style: none;   
+    padding-right: 2em;
+    font-size: 0.8em;
+}
+footer ul li:hover{
+    text-decoration: underline;
+}
+fieldset {
+    margin: 0px;
+    padding: 20px;
+    border: none;
+    /* margin: auto; */
+}
+fieldset label {
+    float: left;
+    margin-left: 14px;
+}
+/* Buttons */
+#btn-signin {
+    width: 90px;
+    height: 34px;
+    background-color: #0077C5;
+    border-radius: 5px;
+    border: none;
+    color: white;
+    margin: auto;
+}
+#btn-create {
+    width: 85%;
+    height: 44px;
+    background-color: #0077C5;
+    border-radius: 5px;
+    border: none;
+    color: white;
+    margin: auto;
+}
+.btn-c {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    align-content: center;
+    margin: auto;
+}
+#btn-create:hover{
+    background-color: rgb(25, 136, 211);
+}
+#btn-signin:hover {
+    background-color: rgb(25, 136, 211);
+}
+/* end buttons */
+
+
+/* Images */
+.logo {
+    display: block;
+    width: 100%;
+    height: 100%;
+}
+.img-link2 {
+    width: 130px;
+    height: 20px;
+    margin-right: 5px;
+}
+.img-link1 {
+    width: 65px;
+    height: 20px;
+    margin-right: 5px;
+}
+.img-link3 {
+    width: 90px;
+    height: 20px;
+}
+.img-btn {
+    margin-right: 5px;
+    width: 15px;
+    height: 15px;
+}
+/* end images */
+
+/* Overlay Box */
+#overlay-box {
+    display: var(--display-div);
+    flex-direction: column;
+    justify-content: center;
+    background-color: #fff;
+    border: 1px solid #000;
+    border-radius: 5px;
+    text-align:center;
+    height: 400px;/*height needs to be set*/
+    width: 800px;
+    margin: auto;
+    position: fixed;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    z-index: 3;
+}
+/* end overlay box */
+
+/* Media rules */
+@media (max-width: 600px){
+    #logo,#links,#form-c {
+        width: 100%;
+    }
+    .t-title {
+        font-size: 1.2em;
+    }
+    .no-bottom-space,.left {
+        font-size: 0.8em;
+    }
+    .no-space {
+        font-size: 0.6em;
+    }
+    #overlay-box {
+        display: var(--display-div);
+        width: 95%;
+        height: auto;
+    }
+    #privacy {
+        width: 100px;
+        height: 30px;
+    }
+    .mini-t {
+        font-size: 0.6em;
+    }
+}
