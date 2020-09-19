@@ -32,20 +32,23 @@ function xml_Request(){
             data.forEach(movie => {
                 const card = document.createElement("div");
                 card.setAttribute("class","card");
+
+                ///to fix later
                 //before the h1 element we'll do another api request to
                 // http://www.omdbapi.com/
                 //format http://www.omdbapi.com/?apikey=[yourkey]&
                 //API key: c52ac68b
                 //format http://www.omdbapi.com/?apikey=[c52ac68b]&t=
                 //first we must process the movie title
-                let movieTitle =  processString(movie.title);
-                urlTitle = "http://www.omdbapi.com/?apikey=c52ac68b&t=" + movieTitle;
-                const img = document.createElement("img");
-                img.setAttribute("class","img-poster");
-                find_poster(urlTitle);
-                img.src = arraPosters[cont];
-                // console.log(arraPosters);
-                cont++;
+                // let movieTitle =  processString(movie.title);
+                // urlTitle = "http://www.omdbapi.com/?apikey=c52ac68b&t=" + movieTitle;
+                // const img = document.createElement("img");
+                // img.setAttribute("class","img-poster");
+                // find_poster(urlTitle);
+                // img.src = arraPosters[cont];
+                // // console.log(arraPosters);
+                // cont++;
+                ///to fixe later
 
 
                 //create h1, set textcontent to film's title
@@ -73,7 +76,8 @@ function xml_Request(){
                 
                 card.appendChild(h1);
                 //append img poster
-                card.appendChild(img);
+                // card.appendChild(img);
+
                 card.appendChild(p2);
                 card.appendChild(divScore);
                 card.appendChild(p);
