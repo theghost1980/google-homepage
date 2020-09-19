@@ -74,6 +74,9 @@ img {
     margin-right: 0px;
     /* margin: auto; */
 }
+.img-poster {
+    height: 50%;
+}
 p {
     padding: 1.5rem;
     margin: auto;

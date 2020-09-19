@@ -41,6 +41,7 @@ function xml_Request(){
                 let movieTitle =  processString(movie.title);
                 urlTitle = "http://www.omdbapi.com/?apikey=c52ac68b&t=" + movieTitle;
                 const img = document.createElement("img");
+                img.setAttribute("class","img-poster");
                 find_poster(urlTitle);
                 img.src = arraPosters[cont];
                 // console.log(arraPosters);
