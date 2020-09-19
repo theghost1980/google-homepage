@@ -3,6 +3,7 @@ const logo = document.createElement("img");
 const container = document.createElement("div");
 const p_description = document.createElement("p");
 const a_link = document.createElement("a");
+var arraPosters = [];
 
 //setting attr
 logo.setAttribute("src","./media-images/logo.png");
@@ -18,8 +19,10 @@ app.appendChild(a_link);
 app.appendChild(container);
 
 function xml_Request(){
+    let cont = 0;
     var request = new XMLHttpRequest();
-    request.open('GET','https://ghibliapi.herokuapp.com/films',true);
+    let url1 = 'https://ghibliapi.herokuapp.com/films';
+    request.open('GET',url1,true);
     request.onload = function () {
         //begin accessing JSON data here
         let data = JSON.parse(this.response);
@@ -29,6 +32,21 @@ function xml_Request(){
             data.forEach(movie => {
                 const card = document.createElement("div");
                 card.setAttribute("class","card");
+                //before the h1 element we'll do another api request to
+                // http://www.omdbapi.com/
+                //format http://www.omdbapi.com/?apikey=[yourkey]&
+                //API key: c52ac68b
+                //format http://www.omdbapi.com/?apikey=[c52ac68b]&t=
+                //first we must process the movie title
+                let movieTitle =  processString(movie.title);
+                urlTitle = "http://www.omdbapi.com/?apikey=c52ac68b&t=" + movieTitle;
+                const img = document.createElement("img");
+                find_poster(urlTitle);
+                img.src = arraPosters[cont];
+                // console.log(arraPosters);
+                cont++;
+
+
                 //create h1, set textcontent to film's title
                 const h1 = document.createElement("h1");
                 h1.textContent = movie.title;
@@ -53,6 +71,8 @@ function xml_Request(){
                 p.textContent = `${movie.description}...`
                 
                 card.appendChild(h1);
+                //append img poster
+                card.appendChild(img);
                 card.appendChild(p2);
                 card.appendChild(divScore);
                 card.appendChild(p);
@@ -70,6 +90,8 @@ function xml_Request(){
     }
     //sending request
     request.send();
+    //delete arraPosters
+    arraPosters = [];
 }
 //doing all the same but using fetch
 function fetch_request(){
@@ -121,7 +143,36 @@ function fetch_request(){
     });
 }
 
+function find_poster(url){
+    // console.log("URL: " + url);
+    var posterRequest = new XMLHttpRequest();
+
+    //in order to work it must be sync
+    posterRequest.open("GET",url,false);
+    posterRequest.onload = function (){
+
+        let data = JSON.parse(this.response);
+        // console.log("OMDB Response: " + this.response);
+        // console.log(data.Poster);
+        //handling errors
+        if (posterRequest.status >= 200 && posterRequest.status < 400){
+            arraPosters.push(data.Poster);
+            // console.log(data.Poster);
+            // console.log(posterUrl);
+        } else {
+            console.log("Error: " + posterRequest.status);
+        }
+    }
+    //sending request
+    posterRequest.send();
+}
+function processString(title){
+    let titleFixed = String(title).split(" ").join("+");
+    // console.log(titleFixed);
+    return titleFixed;
+}
+
 //calling functions
 
-// xml_Request();
-fetch_request();
+xml_Request();
+// fetch_request();
