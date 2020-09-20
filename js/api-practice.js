@@ -6,12 +6,23 @@ const a_link = document.createElement("a");
 const a_link2 = document.createElement("a");
 const p_line = document.createElement("p");
 const p_line2 = document.createElement("p");
+const footer = document.createElement("div");
+const p_foot1 = document.createElement("p");
+const p_foot2 = document.createElement("p");
+const div_top = document.createElement("div");
 let cont = 0;
 
 //setting attr
+div_top.setAttribute("class","div-top");
+footer.setAttribute("class","footer");
+p_foot1.setAttribute("class","footer-text ");
+p_foot2.setAttribute("class","footer-text ");
+p_foot1.textContent = "@theghost1980";
+p_foot2.textContent = "As part of my lessons on The Odin Project";
 p_line.setAttribute("class","p-link");
 p_line2.setAttribute("class","p-link");
 logo.setAttribute("src","./media-images/logo.png");
+logo.setAttribute("class","img-logo");
 container.setAttribute("class","container");
 a_link.setAttribute("href","https://ghibliapi.herokuapp.com/films");
 a_link.setAttribute("target","_blank");
@@ -23,12 +34,14 @@ a_link2.textContent = "Click here to open the API #2";
 p_description.textContent = "This webpage is loading the information of each movie, from the restful API's #1: https://ghibliapi.herokuapp.com/films, #2: http://www.omdbapi.com/. Click on the links down below, to open them in another windows.";
 p_line.appendChild(a_link);
 p_line2.appendChild(a_link2);
+div_top.appendChild(logo);
 //appending childs to body
-app.appendChild(logo);
+app.appendChild(div_top);
 app.appendChild(p_description);
 app.appendChild(p_line);
 app.appendChild(p_line2);
 app.appendChild(container);
+add_footer();
 
 function xml_Request(){
     var request = new XMLHttpRequest();
@@ -55,13 +68,13 @@ function xml_Request(){
                 //call another request to get the path
                 var posterRequest = new XMLHttpRequest();
                 let url = "http://www.omdbapi.com/?apikey=c52ac68b&t=" + alt_text;
-                console.log(url);
+                // console.log(url);
                 posterRequest.open("GET",url,true);
                 posterRequest.onload = function (){
                     let data = JSON.parse(this.response);
                     //handling errors
                     if (posterRequest.status >= 200 && posterRequest.status < 400){
-                        console.log(data.Poster);
+                        // console.log(data.Poster);
                         //assign to image
                         img.setAttribute("src",data.Poster);
                     } else {
@@ -117,37 +130,6 @@ function xml_Request(){
     }
     //sending request
     request.send();
-}
-//now we process, after the first request is done,we ask for the array of img paths
-function request_paths(){
-    ///to fix later
-    //before the h1 element we'll do another api request to
-    // http://www.omdbapi.com/
-    //format http://www.omdbapi.com/?apikey=[yourkey]&
-    //API key: c52ac68b
-    //format http://www.omdbapi.com/?apikey=[c52ac68b]&t=
-    // urlTitle = "http://www.omdbapi.com/?apikey=c52ac68b&t=" + movieTitle;
-    // img.src = arraPosters[cont];
-    // // console.log(arraPosters);
-    // cont++;
-        var posterRequest = new XMLHttpRequest();
-        let elem = document.getElementById(`${i}`);
-        let url = "http://www.omdbapi.com/?apikey=c52ac68b&t=" + elem.getAttribute("alt");
-        console.log(url);
-        posterRequest.open("GET",url,true);
-        posterRequest.onload = function (){
-            let data = JSON.parse(this.response);
-            // console.log("OMDB Response: " + this.response);
-            // console.log(data.Poster);
-            //handling errors
-            if (posterRequest.status >= 200 && posterRequest.status < 400){
-                console.log(data.Poster);
-            } else {
-                console.log("Error: " + posterRequest.status);
-            }
-        }
-           //sending request
-           posterRequest.send();
 }
 
 //doing all the same but using fetch
@@ -229,9 +211,14 @@ function processString(title){
     // console.log(titleFixed);
     return titleFixed;
 }
+function add_footer(){
+    footer.appendChild(p_foot1);
+    footer.appendChild(p_foot2);
+    footer.style.display = "flex";
+    app.appendChild(footer);
+}
 
 //calling functions
-
 xml_Request();
 // console.log(arrayTitles);
 // request_paths();
