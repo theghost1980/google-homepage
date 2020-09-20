@@ -139,12 +139,15 @@ p {
     font-size: 0.9em;
 }
 /* Media rules */
-@media screen and (min-width: 600px){
+@media screen and (max-width: 600px){
     .card {
-        flex: 1 1 calc(50% - 2rem);
+        flex: 1 1 calc(70% - 2rem);
+    }
+    .img-logo {
+        max-width: 80%;
     }
 }
-@media screen and (min-width: 900px){
+@media screen and (min-width: 600px){
     .card {
         flex: 1 1 calc(30% - 2rem);
     }
