@@ -1,0 +1,235 @@
+/* global vars */
+:root {
+    --display-div: none;
+}
+/* End global vars */
+
+html,body {
+    margin: 0px;
+    padding: 0px;
+    font-family: 'Nunito', sans-serif;
+    background-color: #f8ce86;
+}
+#logo-container {
+    margin: auto;
+    width: 100%;
+    text-align: center;
+    /* background-color: #f89d00; */
+    background-image: linear-gradient( #f89d00, #f8ce86);
+}
+#form-container {
+    padding: 20px;
+    margin: auto;
+    text-align: center;
+    align-items: center;
+    /* border: 1px solid black; */
+    background-color: whitesmoke;
+    box-shadow: 1px 1px 4px gray;
+}
+#main-form {
+    width: 500px;
+    height: 50px;
+    /* border: 1px solid black; */
+    text-align: center;
+    align-items: center;
+    margin: auto;
+}
+#search-results {
+    display: flex;
+    flex-direction: column;
+}
+#search-input {
+    width: 60%;
+    height: 30px;
+}
+#search-button {
+    width: 30%;
+    height: 30px;
+}
+.searchR-div {
+    display: flex;
+    flex-direction: row;
+    width: 60%;
+    height: auto;
+    margin: auto;
+    margin-bottom: 20px;
+    background-color: whitesmoke;
+    box-shadow: 1px 1px 4px gray;
+}
+.searchR-div:hover {
+    cursor: pointer;
+}
+footer {
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    bottom: 0px;
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    margin: auto;
+    color: rgb(170, 51, 51);
+}
+footer > p > a {
+    color: indianred;
+}
+/* .searchR-div > div > p{
+    font-size: 0.8em;
+    line-height: 1.1em;
+    margin-bottom: 0px;
+    
+} */
+.div-img-search {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /* border: 1px solid black; */
+    padding: 20px;
+}
+.div-text-search {
+    display: flex;
+    flex-direction: column;
+}
+.div-text-search > p {
+    margin: 5px;
+    padding: 5px;
+    font-size: 0.8em;
+}
+/* Overlay Box */
+#overlay-box {
+    display: var(--display-div);
+    flex-direction: row;
+    background-color: #fff;
+    border: 1px solid #000;
+    border-radius: 5px;
+    height: 85%;/*height needs to be set*/
+    width: 65%;
+    margin: auto;
+    position: fixed;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    z-index: 3;
+}
+#top-movie {
+    position: absolute;
+    top: 0px;
+    right: 0px;
+    border: 1px solid black;
+}
+#top-movie:hover {
+    cursor: pointer;
+}
+#top-movie > p {
+    font-size: 0.7em;
+}
+#img-poster-cont {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    width: 60%;
+    height: 100%;
+    margin: auto;
+}
+#img-poster {
+    display: block;
+    width: 95%;
+    height: 95%;
+    border-radius: 5px;
+}
+#info-mov-cont {
+    border: 1px solid black;
+    display: flex;
+    flex-direction: column;
+    width: 40%;
+    padding: 10px;
+}
+#movie-info-top {
+    display: flex;
+    flex-direction: column;
+    height: 50%;
+    overflow: auto;
+}
+#movie-info-top > p {
+    font-size: 0.9em;
+    margin-bottom: 4px;
+    /* padding-bottom: 4px; */
+}
+#movie-info-bottom {
+    display: flex;
+    flex-direction: column;
+    height: 50%;
+    overflow: auto;
+}
+#movie-info-bottom > p {
+    line-height: 1.4em;
+    text-align: justify;
+}
+#movie-overview {
+    height: 70%;
+    overflow: auto;
+}
+#production-comp-cont {
+    /* border: 1px solid black; */
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    height: 30%;
+    overflow: auto;
+}
+.pcLogo {
+    display: block;
+    height: 40px;
+    padding-left: 5px;
+}
+/* end overlay box */
+
+/* Buttons */
+#search-button:hover{
+    cursor: pointer;
+}
+/* end buttons */
+
+/* P tags */
+.p_centered {
+    text-align: center;
+    margin: auto;
+}
+#sep {
+    line-height: 5px;
+    margin: 0px;
+    padding: 0px;
+}
+#movie-overview {
+    overflow: auto;
+    font-size: 0.92em;
+}
+.p-bold {
+    font-weight: 900;
+}
+.p-italic {
+    font-style: italic;
+}
+#data_results {
+    padding: 10px;
+    font-size: 0.9em;
+    font-style: italic;
+}
+/* end p tags */
+
+/* Images */
+.img-search {
+    width: 92px;
+    height: 138px;
+    border-radius: 5px;
+    box-shadow: 1px 1px 4px gray;
+}
+#tmdb-logo {
+    height: 90px;
+}
+/* end images */

@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@300&display=swap" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css2?family=Source+Sans+Pro&display=swap" rel="stylesheet">
+        <meta http-equiv="Content-Security-Policy" content="upgrade-insecure-requests"> 
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1" />
+        <link rel="stylesheet" href="./styles/api-practice2.css">
+        <script type="text/javascript" src="./js/api-practice2.js" defer></script>
+        <title>API rest practice #2</title>
+    </head>
+    <body>
+        <div id="main-container">
+            <div id="logo-container">
+                <img src="./media-images/logo-search.png"  id="img-logo"/>
+            </div>
+            <div id="form-container">
+                <form id="main-form" onsubmit="event.preventDefault();">
+                    <input type="text" id="search-input" autofocus/>
+                    <button type="submit" id="search-button">Search</button>
+                </form>
+            </div>
+            <p id="data_results"></p>
+            <div id="search-results">
+            </div>
+            <!-- overlay box -->
+            <div id="overlay-box">
+                <div id="top-movie" onclick="show_details_movie(this.id)">
+                    <p id="btn-close">X - Close</p>
+                </div>
+                <div id="img-poster-cont">
+                    <img id="img-poster" alt="Poster+Film">
+                </div>
+                <div id="info-mov-cont">
+                    <div id="movie-info-top">
+                        <p id="original-title"></p>
+                        <p id="tag-line"></p>
+                        <p id="movie-ori-lang"></p>
+                        <p id="movie-popularity"></p>
+                        <p id="movie-vote-avg"></p>
+                        <p id="movie-vote-count"></p>
+                        <p id="movie-id"></p>
+                    </div>
+                    <p id="sep">___________________________________</p>
+                    <div id="movie-info-bottom">
+                        <p id="movie-overview"></p>
+                        <div id="production-comp-cont"></div>
+                    </div>
+                </div>
+            </div>
+        <!-- end overlay box -->
+        <footer>
+            <p>@theghost1980 As part of my formation as FullStack Web Developer</p>
+            <p>the API is provided by <a href="https://www.themoviedb.org/">The MovieDB.org</a></a></p>
+            <a href="https://developers.themoviedb.org/" target="_blank"><img src="./media-images/tmdb-logo.svg" id="tmdb-logo"/></a>
+        </footer>
+        </div>
+    </body>
+</html>
