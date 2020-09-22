@@ -18,33 +18,70 @@ html,body {
     background-image: linear-gradient( #f89d00, #f8ce86);
 }
 #form-container {
-    padding: 20px;
-    margin: auto;
-    text-align: center;
-    align-items: center;
-    /* border: 1px solid black; */
-    background-color: whitesmoke;
-    box-shadow: 1px 1px 4px gray;
-}
-#main-form {
-    width: 500px;
-    height: 50px;
-    /* border: 1px solid black; */
-    text-align: center;
-    align-items: center;
-    margin: auto;
-}
-#search-results {
     display: flex;
     flex-direction: column;
+    text-align: center;
+    width: 100%;
+    margin: auto;
+    /* border: 1px solid #f89d00; */
+    /* background-color: whitesmoke; */
+    box-shadow: 2px 2px 4px #a86d06;
 }
+#main-form {
+    width: 40%;
+    height: auto;
+    /* border: 1px solid black; */
+    margin: auto;
+}
+.flex-row {
+    display: flex;
+    flex-direction: row;
+    height: 30px;
+    padding-top: 20px;
+}
+.flex-column {
+    display: flex;
+    flex-direction: column;
+    height: 50px;
+    padding-top: 20px;
+}
+.centered-div {
+    justify-content: center;
+    text-align: center;
+    align-items: center;
+    margin: auto;
+}
+.ul-horizontal {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    list-style: none;
+    padding-top: 20px;
+    margin:0px;
+    padding:0px;
+    overflow: hidden;
+}
+.ul-horizontal li {
+   float: inherit;
+   padding:16px;
+}
+/* .ul-menu li:last-child {
+    margin-right: 0px;
+} */
+/* form elements */
 #search-input {
-    width: 60%;
+    width: 70%;
     height: 30px;
 }
 #search-button {
-    width: 30%;
-    height: 30px;
+    height: 20px;
+    width: 20%;
+}
+/* end form elements */
+
+#search-results {
+    display: flex;
+    flex-direction: column;
 }
 .searchR-div {
     display: flex;
@@ -117,12 +154,18 @@ footer > p > a {
     top: 0px;
     right: 0px;
     border: 1px solid black;
+    background-color: #f8ce86;
+    border-radius: 5px;
+    height: 25px;
 }
 #top-movie:hover {
     cursor: pointer;
 }
 #top-movie > p {
-    font-size: 0.7em;
+    font-size: 0.6em;
+    margin-left: 5px;
+    margin-right: 5px;
+    line-height: 8px;
 }
 #img-poster-cont {
     display: flex;
@@ -130,22 +173,23 @@ footer > p > a {
     justify-content: center;
     align-items: center;
     text-align: center;
-    width: 60%;
+    width: 55%;
     height: 100%;
     margin: auto;
 }
 #img-poster {
     display: block;
-    width: 95%;
+    width: 85%;
     height: 95%;
     border-radius: 5px;
+    box-shadow: 1px 1px 5px rgb(151, 31, 31);
 }
 #info-mov-cont {
-    border: 1px solid black;
+    /* border: 1px solid black; */
     display: flex;
     flex-direction: column;
-    width: 40%;
-    padding: 10px;
+    width: 45%;
+    padding: 5px;
 }
 #movie-info-top {
     display: flex;
@@ -154,7 +198,7 @@ footer > p > a {
     overflow: auto;
 }
 #movie-info-top > p {
-    font-size: 0.9em;
+    font-size: 0.8em;
     margin-bottom: 4px;
     /* padding-bottom: 4px; */
 }
@@ -165,8 +209,11 @@ footer > p > a {
     overflow: auto;
 }
 #movie-info-bottom > p {
+    margin-top: 25px;
     line-height: 1.4em;
     text-align: justify;
+    font-size: 0.8em;
+    margin-right: 30px;
 }
 #movie-overview {
     height: 70%;
@@ -204,6 +251,8 @@ footer > p > a {
     line-height: 5px;
     margin: 0px;
     padding: 0px;
+    width: auto;
+    text-align: center;
 }
 #movie-overview {
     overflow: auto;
@@ -218,11 +267,46 @@ footer > p > a {
 #data_results {
     padding: 10px;
     font-size: 0.9em;
-    font-style: italic;
+    color: rgb(209, 30, 30);
 }
 /* end p tags */
 
+/* text type//input tags */
+.text-bold {
+    font-size: 1.1em;
+    color: rgb(209, 30, 30);
+}
+input[type="radio"] {
+    /* remove standard background appearance */
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+      /* create custom radiobutton appearance */
+    display: inline-block;
+    width: 20px;
+    height: 20px;
+    padding: 3px;
+    /* background-color only for content */
+    background-clip: content-box;
+    border: 1px solid #d15555;
+    /* background-color: #ffffff; */
+    border-radius: 50%;
+}
+input[type="radio"]:checked{
+    background-color: rgb(209, 30, 30);
+}
+.text-underline {
+    text-decoration: underline;
+    cursor: pointer;
+}
+/* end text type tags */
+
 /* Images */
+#img-logo {
+    /* border: 1px solid black; */
+    height: 150px;
+    /* box-shadow: 3px 1px 3px #f89d00; */
+}
 .img-search {
     width: 92px;
     height: 138px;
@@ -230,6 +314,63 @@ footer > p > a {
     box-shadow: 1px 1px 4px gray;
 }
 #tmdb-logo {
-    height: 90px;
+    height: 80px;
 }
-/* end images */
+
+/* media rules */
+@media screen and (max-width: 600px){
+    #img-logo {
+        height: 80px;
+    }
+    #main-form {
+        width: 100%;
+    }
+    /* text//inputs content */
+    .text-bold, #data_results  {
+        font-size: 0.7em;
+    }
+    input[type="radio"] {
+        width: 15px;
+        height: 15px;
+    }
+    .searchR-div {
+        width: 80%;
+        flex-direction: column;
+    }
+    /* end text//inputs content */
+    #top-movie {
+        position: fixed;
+    }
+    /* overlay box */
+    #overlay-box {
+        width: 99%;
+        height: auto;
+        flex-direction: column;
+        overflow: auto;
+    }
+    #img-poster-cont {
+        /* margin: auto; */
+    }
+    #info-mov-cont {
+        width: 100%;
+    }
+    #movie-info-top {
+        top:55%;
+    }
+    #movie-info-top > p {
+        /* font-size: 0.8em; */
+        text-align: center;
+    }
+    #movie-info-bottom {
+        width: 100%;
+    }
+    #movie-info-bottom > p {
+        padding: 10px;
+        margin: 10px;
+    }
+    .pcLogo {
+        height: 20px;
+    }
+    /* end overlay box */
+}
+/* end media rules */

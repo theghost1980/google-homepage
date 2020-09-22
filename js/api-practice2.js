@@ -5,6 +5,10 @@
 //optional: we may try to find the downloable info for this movie, maybe find another api for torrents
 //optional 2: would be great to get the trailer from your youtube.
 
+//keyboard support
+document.onkeypress = keyboard;
+
+//constants elements
 const overlayBox = document.getElementById("overlay-box");
 const search_results = document.getElementById("search-results");
 const btn_search = document.getElementById("search-button");
@@ -14,23 +18,31 @@ p_data_results.setAttribute("class","p_centered");
 //important constant variables URL + ApiKey
 const apiKey = "ac20ea9f613b8fd5a88d72e8950b23d4";
 const movieUrl = "https://api.themoviedb.org/3/search/movie?api_key=";
+const tvShowUrl = "https://api.themoviedb.org/3/search/tv?api_key=";
 const imagePw92Url = "https://image.tmdb.org/t/p/w92";
 const imagePw500Url = "https://image.tmdb.org/t/p/w500";
+
+//global vars
+let searchType = "";
 
 //adding events listeners
 btn_search.addEventListener("click",function(e){
     //validation of input
     let input_text = document.getElementById("search-input");
+    // console.log("Input value: " + input_text.value);
     if (input_text.value == "" || input_text.value.length == 0 || input_text.value == null){
         console.log("Please Input a valid query, then press ENTER or Search");
-        return 0;
+        return;
     }
     //search for divs already created
     if (document.querySelectorAll(".searchR-div").length > 0){
         document.querySelectorAll(".searchR-div").forEach(e => e.remove());
         p_data_results.textContent = "";
     }
-    process_query();
+    //check search type
+    searchType = document.querySelector('input[name="queryType"]:checked').value;
+    // console.log("S Type: " + searchType);
+    process_query(searchType);
 });
 
 function CheckError(response){
@@ -42,7 +54,7 @@ function CheckError(response){
     }
 }
 
-function process_query(){
+function process_query(sType){
     // alert("Hey");
     //meassuring time of process the query
     var start = window.performance.now();
@@ -53,8 +65,13 @@ function process_query(){
         fixed_text = String(fixed_text).split(" ").join("+");
     }
     console.log("Search Q: " + fixed_text);
-    
-    let url = movieUrl + apiKey + "&query="+ fixed_text;
+    let url = "";
+    //check type of query
+    if (sType == "movies"){
+        url = movieUrl + apiKey + "&query=" + fixed_text;
+    } else {
+        url = tvShowUrl + apiKey + "&query=" + fixed_text;
+    }
     console.log(url);
     fetch(url)
     .then(CheckError) //handling possible errors 4xx & 5xx
@@ -95,12 +112,17 @@ function process_query(){
                 div_r.appendChild(id_p);
                 //adding img to the div left
                 div_l.appendChild(img_search);
-                title_p.textContent = "Original Title: " + element.original_title;
+                title_p.textContent = "Original Title: " + (element.original_title || element.original_name);
                 overview_p.textContent = "Overview: " + element.overview.substring(0, 150) + " ..."; //limited chars
                 voteAvg_p.textContent = "Vote Average: " + element.vote_average;
-                release_date.textContent = "Release Date: " + element.release_date;
+                release_date.textContent = "Release Date: " + (element.release_date || element.first_air_date);
                 id_p.textContent = "Id: " + element.id;
-                img_search.src = imagePw92Url + element.poster_path;
+                //check if the image return null
+                if (element.poster_path !== null){
+                    img_search.src = imagePw92Url + element.poster_path;
+                } else {
+                    img_search.src = "./media-images/no-mini-image.jpg";
+                }
                 img_search.alt = fixed_text;
                 //setting attributes
                 img_search.setAttribute("class","img-search");
@@ -150,6 +172,12 @@ function process_query(){
     p_data_results.textContent += " Found results in " + dur + " ms.";
 }
 
+function keyboard(e){
+    let eventKeyboard = e || window.event;
+    let keyPressed = eventKeyboard.keyCode;
+    // alert(keyPressed);
+}
+
 function meassureTimeExec(){
     console.log("End Query!");
     //calculations to meassure time of execution
@@ -165,11 +193,19 @@ function roundNumber(num){
     return parseFloat(num).toFixed(2);
 }
 
-function requestMovieById(id){
+function requestMovieById(id,sType){
     const movieIdUrl = `https://api.themoviedb.org/3/movie/${id}?api_key=`;
-    let url = movieIdUrl + apiKey; 
+    const tvShowIdUrl = `https://api.themoviedb.org/3/tv/${id}?api_key=`;
+    let url = "";
+    //check type of query
+    console.log("Query Type: " + sType);
+    if (sType == "movies"){
+        url = movieIdUrl + apiKey;
+    } else {
+        url = tvShowIdUrl + apiKey;
+    }
     console.log(url)
-    return fetch(url)
+    fetch(url)
     .then(CheckError) //handling response + 4xx & 5xx errors
     .then(function(data){
         console.log("Inside the Fecth");
@@ -197,11 +233,13 @@ function requestMovieById(id){
         //present results
         document.getElementById("movie-id").textContent = data.id;
         document.getElementById("img-poster").src = imagePw500Url + data.poster_path;
-        document.getElementById("original-title").textContent = "Original Title: " + data.original_title;
+        document.getElementById("original-title").textContent = "Original Title: " + (data.original_title || data.original_name);
         document.getElementById("movie-ori-lang").textContent = "Movie Original Language: " + data.original_language;
-        let moto = data.tagline;
-        if (moto == "" || moto.length == 0 || moto == null){ moto = "It does not have a Moto :(";}
-        document.getElementById("tag-line").textContent = "Moto: " + moto;
+        if (sType == "movies"){    
+            let moto = data.tagline;
+            if (moto == "" || moto.length == 0 || moto == null){ moto = "It does not have a Moto :(";}
+            document.getElementById("tag-line").textContent = "Moto: " + '"' + moto + '"';
+        }
         document.getElementById("movie-popularity").textContent = "Popularity: " + data.popularity;
         document.getElementById("movie-vote-avg").textContent = "Vote Avg.: " + data.vote_average;
         document.getElementById("movie-vote-count").textContent = "Vote Count: " + data.vote_count;
@@ -230,12 +268,15 @@ function show_details_movie(id){
          if (document.querySelectorAll(".pcLogo").length > 0){
             document.querySelectorAll(".pcLogo").forEach(e => e.remove());
         }
+        if (document.getElementById("img-poster")){
+            document.getElementById("img-poster").src = "";
+        }
         overlayBox.style.setProperty('--display-div','none');
     }
     else {
         //now we search by ID for the selected Movie
         if (!isNaN(id)){    
-            requestMovieById(id);
+            requestMovieById(id,searchType);
         }
         //set to flex to show div
         overlayBox.style.setProperty('--display-div','flex');

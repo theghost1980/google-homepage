@@ -17,8 +17,23 @@
             </div>
             <div id="form-container">
                 <form id="main-form" onsubmit="event.preventDefault();">
-                    <input type="text" id="search-input" autofocus/>
-                    <button type="submit" id="search-button">Search</button>
+                    <div class="flex-column centered-div">
+                        <input type="text" id="search-input" autofocus/>
+                        <button type="submit" id="search-button">Search</button>
+                    </div>
+                    <div class="flex-row centered-div">
+                            <label for="option-movies" class="text-bold">Movies: </label>
+                            <input type="radio" class="option" name="queryType" value="movies" checked />
+                            <label for="option-movies" class="text-bold">TV Shows: </label>
+                            <input type="radio" class="option" name="queryType" value="tv"/>
+                    </div>
+                    <div class="centered-div">
+                        <ul class="ul-horizontal">
+                            <li class="text-bold text-underline">Lastest</li>
+                            <li class="text-bold text-underline">Tredings</li>
+                            <li class="text-bold text-underline">Genres</li>
+                        </ul>
+                    </div>
                 </form>
             </div>
             <p id="data_results"></p>
@@ -30,12 +45,12 @@
                     <p id="btn-close">X - Close</p>
                 </div>
                 <div id="img-poster-cont">
-                    <img id="img-poster" alt="Poster+Film">
+                    <img id="img-poster" alt="Poster+Film" />
                 </div>
                 <div id="info-mov-cont">
                     <div id="movie-info-top">
-                        <p id="original-title"></p>
-                        <p id="tag-line"></p>
+                        <p id="original-title" class="b-bold"></p>
+                        <p id="tag-line" class="p-italic"></p>
                         <p id="movie-ori-lang"></p>
                         <p id="movie-popularity"></p>
                         <p id="movie-vote-avg"></p>
