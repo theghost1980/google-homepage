@@ -99,6 +99,7 @@ html,body {
 footer {
     justify-content: center;
     align-items: center;
+    text-align: center;
     position: relative;
     bottom: 0px;
     display: flex;
@@ -328,6 +329,12 @@ input[type="radio"]:checked{
     /* text//inputs content */
     .text-bold, #data_results  {
         font-size: 0.7em;
+    }
+    footer > p {
+        font-size: 0.7em;
+    }
+    #tmdb-logo {
+        height: 30px;
     }
     input[type="radio"] {
         width: 15px;
