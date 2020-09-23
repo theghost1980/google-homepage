@@ -9,7 +9,7 @@
 document.onkeypress = keyboard;
 
 //constants elements
-const btnShare = document.getElementById("share-facebook");
+const btnShare = document.getElementById("share-img-fb");
 const overlayBox = document.getElementById("overlay-box");
 const search_results = document.getElementById("search-results");
 const btn_search = document.getElementById("search-button");
