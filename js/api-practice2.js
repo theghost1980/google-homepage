@@ -9,6 +9,7 @@
 document.onkeypress = keyboard;
 
 //constants elements
+const btnShare = document.getElementById("share-facebook");
 const overlayBox = document.getElementById("overlay-box");
 const search_results = document.getElementById("search-results");
 const btn_search = document.getElementById("search-button");
@@ -48,6 +49,7 @@ li_topR.addEventListener("click",function() {
     checkOldElements();
     process_query(searchType,page,"top");
 });
+btnShare.addEventListener("click",shareSocial);
 
 function CheckError(response){
     if (response.status >= 200 && response.status <= 299){
@@ -56,6 +58,13 @@ function CheckError(response){
     } else {
         throw Error(response.status);
     }
+}
+
+function shareSocial() {
+    var params = "menubar=yes,toolbar=yes,status=yes,width=400,height=400"; // for window
+    let url = window.location.href;
+    let shareUrl = `http://www.facebook.com/sharer/sharer.phpu=${url}`;
+    window.open(shareUrl,"NewWindow" , params);  
 }
 
 function process_query(sType,_page = page,option){
