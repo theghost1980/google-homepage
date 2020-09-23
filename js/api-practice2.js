@@ -319,8 +319,12 @@ function requestMovieById(id,sType){
             if (data.videos.results[0].site == "YouTube"){
                 console.log("Trailer at Key: " + data.videos.results[0].key);
                 //we add the video sr to the iframe
+                document.getElementById("video-trailer").style.display = "flex";
                 document.getElementById("video-trailer").src = "https://www.youtube.com/embed/" + data.videos.results[0].key;
             }
+        } else {
+            //no videos avaliable
+            document.getElementById("video-trailer").style.display = "none";
         }
     })
     .catch(function(error){ //handling errors
