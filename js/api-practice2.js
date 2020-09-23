@@ -78,6 +78,8 @@ function process_query(sType,_page = page){
         console.log("Pages: " + pages);
         //add pages to the div
         const divPages = document.getElementById("div-pages");
+        //we must limit for now the pages from pages to 20
+        if (pages > 20){pages = 20;}
         for(let i = 1; i <= pages; i++){
             let li = document.createElement("li");
             let a = document.createElement("a");
