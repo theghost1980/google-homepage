@@ -21,9 +21,12 @@ const movieUrl = "https://api.themoviedb.org/3/search/movie?api_key=";
 const tvShowUrl = "https://api.themoviedb.org/3/search/tv?api_key=";
 const imagePw92Url = "https://image.tmdb.org/t/p/w92";
 const imagePw500Url = "https://image.tmdb.org/t/p/w500";
+const nullPosterUrl = "./media-images/null-poster.jpg";
+const appendToUrl = "&append_to_response=videos";
 
 //global vars
 let searchType = "";
+let page = 1; //default value
 
 //adding events listeners
 btn_search.addEventListener("click",function(e){
@@ -34,13 +37,7 @@ btn_search.addEventListener("click",function(e){
         console.log("Please Input a valid query, then press ENTER or Search");
         return;
     }
-    //search for divs already created
-    if (document.querySelectorAll(".searchR-div").length > 0){
-        document.querySelectorAll(".searchR-div").forEach(e => e.remove());
-        p_data_results.textContent = "";
-    }
-    //check search type
-    searchType = document.querySelector('input[name="queryType"]:checked').value;
+   checkOldElements();
     // console.log("S Type: " + searchType);
     process_query(searchType);
 });
@@ -54,7 +51,7 @@ function CheckError(response){
     }
 }
 
-function process_query(sType){
+function process_query(sType,_page = page){
     // alert("Hey");
     //meassuring time of process the query
     var start = window.performance.now();
@@ -68,14 +65,35 @@ function process_query(sType){
     let url = "";
     //check type of query
     if (sType == "movies"){
-        url = movieUrl + apiKey + "&query=" + fixed_text;
+        url = movieUrl + apiKey + "&query=" + fixed_text + "&page=" + _page;
     } else {
-        url = tvShowUrl + apiKey + "&query=" + fixed_text;
+        url = tvShowUrl + apiKey + "&query=" + fixed_text + "&page=" + _page;
     }
     console.log(url);
     fetch(url)
     .then(CheckError) //handling possible errors 4xx & 5xx
     .then(function(data){
+        //check data for pages
+        let pages = data.total_pages
+        console.log("Pages: " + pages);
+        //add pages to the div
+        const divPages = document.getElementById("div-pages");
+        for(let i = 1; i <= pages; i++){
+            let li = document.createElement("li");
+            let a = document.createElement("a");
+            a.textContent = i;
+            a.setAttribute("class","text-bold text-under-pages");
+            if (i == _page){
+                a.style.textDecoration = "underline";
+                a.style.fontWeight = "bold";
+            }
+            li.setAttribute("id", "li-" + i);
+            li.setAttribute("class","pages");
+            // li.addEventListener("click",process_query(searchType,));
+            li.addEventListener("click",resolveId);
+            li.appendChild(a);
+            divPages.appendChild(li);
+        }
         let l_array = data.results.length;
         // console.log("Length Array: " + l_array);
         if(l_array > 0){
@@ -171,7 +189,28 @@ function process_query(sType){
     console.log("Time of Execution: " + dur);
     p_data_results.textContent += " Found results in " + dur + " ms.";
 }
-
+function checkOldElements(){
+    //search for divs & elements already created
+    if (document.querySelectorAll(".searchR-div").length > 0){
+        document.querySelectorAll(".searchR-div").forEach(e => e.remove());
+        p_data_results.textContent = "";
+    }
+    console.log(".Pages found: " + document.querySelectorAll(".pages").length);
+    if (document.querySelectorAll(".pages").length > 0){
+        document.querySelectorAll(".pages").forEach(e => e.remove());
+    }
+    //check search type
+    searchType = document.querySelector('input[name="queryType"]:checked').value;
+    
+}
+function resolveId(){
+    let id = this.id;
+    let _id = this.id.split("-")[1];
+    // console.log(_id);
+    //check and delete prevois results
+    checkOldElements();
+    process_query(searchType,_id);
+}
 function keyboard(e){
     let eventKeyboard = e || window.event;
     let keyPressed = eventKeyboard.keyCode;
@@ -200,9 +239,9 @@ function requestMovieById(id,sType){
     //check type of query
     console.log("Query Type: " + sType);
     if (sType == "movies"){
-        url = movieIdUrl + apiKey;
+        url = movieIdUrl + apiKey + appendToUrl;
     } else {
-        url = tvShowIdUrl + apiKey;
+        url = tvShowIdUrl + apiKey + appendToUrl;
     }
     console.log(url)
     fetch(url)
@@ -232,7 +271,11 @@ function requestMovieById(id,sType){
 
         //present results
         document.getElementById("movie-id").textContent = data.id;
-        document.getElementById("img-poster").src = imagePw500Url + data.poster_path;
+        if (data.poster_path == null){
+            document.getElementById("img-poster").src = nullPosterUrl;
+        } else {
+            document.getElementById("img-poster").src = imagePw500Url + data.poster_path;
+        }
         document.getElementById("original-title").textContent = "Original Title: " + (data.original_title || data.original_name);
         document.getElementById("movie-ori-lang").textContent = "Movie Original Language: " + data.original_language;
         if (sType == "movies"){    
@@ -244,6 +287,15 @@ function requestMovieById(id,sType){
         document.getElementById("movie-vote-avg").textContent = "Vote Avg.: " + data.vote_average;
         document.getElementById("movie-vote-count").textContent = "Vote Count: " + data.vote_count;
         document.getElementById("movie-overview").textContent = "OverView: " + data.overview;
+        //youtube trailer
+        console.log("Videos Found: " + data.videos.results.length);
+        if (data.videos.results.length > 0){
+            if (data.videos.results[0].site == "YouTube"){
+                console.log("Trailer at Key: " + data.videos.results[0].key);
+                //we add the video sr to the iframe
+                document.getElementById("video-trailer").src = "https://www.youtube.com/embed/" + data.videos.results[0].key;
+            }
+        }
     })
     .catch(function(error){ //handling errors
         console.log(error);

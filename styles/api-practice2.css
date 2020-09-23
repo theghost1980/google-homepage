@@ -241,6 +241,9 @@ footer > p > a {
 #search-button:hover{
     cursor: pointer;
 }
+#btn-trailer {
+    width: 150px;
+}
 /* end buttons */
 
 /* P tags */
@@ -276,6 +279,11 @@ footer > p > a {
 .text-bold {
     font-size: 1.1em;
     color: rgb(209, 30, 30);
+}
+.text-under-pages {
+    font-size: 1em;
+    color: rgb(209, 30, 30);
+    cursor: pointer;
 }
 input[type="radio"] {
     /* remove standard background appearance */
@@ -377,6 +385,18 @@ input[type="radio"]:checked{
     }
     .pcLogo {
         height: 20px;
+    }
+    /* end overlay box */
+}
+@media screen and (min-width: 601px) and (max-width:850px){
+    /* .searchR-div {
+        width: 80%;
+        flex-direction: column;
+    } */
+    /* end text//inputs content */
+    /* overlay box */
+    #overlay-box {
+        width: calc(100% - 5em);
     }
     /* end overlay box */
 }
