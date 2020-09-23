@@ -13,12 +13,15 @@ const overlayBox = document.getElementById("overlay-box");
 const search_results = document.getElementById("search-results");
 const btn_search = document.getElementById("search-button");
 const p_data_results = document.getElementById("data_results");
+const li_topR = document.getElementById("top-rated-li");
 //seting attributes
 p_data_results.setAttribute("class","p_centered");
 //important constant variables URL + ApiKey
 const apiKey = "ac20ea9f613b8fd5a88d72e8950b23d4";
 const movieUrl = "https://api.themoviedb.org/3/search/movie?api_key=";
 const tvShowUrl = "https://api.themoviedb.org/3/search/tv?api_key=";
+const tMovieUrl = "https://api.themoviedb.org/3/movie/top_rated?api_key=";
+const ttvShowUrl = "https://api.themoviedb.org/3/tv/top_rated?api_key=";
 const imagePw92Url = "https://image.tmdb.org/t/p/w92";
 const imagePw500Url = "https://image.tmdb.org/t/p/w500";
 const nullPosterUrl = "./media-images/null-poster.jpg";
@@ -41,6 +44,10 @@ btn_search.addEventListener("click",function(e){
     // console.log("S Type: " + searchType);
     process_query(searchType);
 });
+li_topR.addEventListener("click",function() {
+    checkOldElements();
+    process_query(searchType,page,"top");
+});
 
 function CheckError(response){
     if (response.status >= 200 && response.status <= 299){
@@ -51,7 +58,7 @@ function CheckError(response){
     }
 }
 
-function process_query(sType,_page = page){
+function process_query(sType,_page = page,option){
     // alert("Hey");
     //meassuring time of process the query
     var start = window.performance.now();
@@ -65,9 +72,17 @@ function process_query(sType,_page = page){
     let url = "";
     //check type of query
     if (sType == "movies"){
-        url = movieUrl + apiKey + "&query=" + fixed_text + "&page=" + _page;
-    } else {
-        url = tvShowUrl + apiKey + "&query=" + fixed_text + "&page=" + _page;
+        if (option == "" || option == null){
+            url = movieUrl + apiKey + "&query=" + fixed_text + "&page=" + _page;
+        } else {
+            url = tMovieUrl + apiKey + "&page=" + _page;
+        }
+    } else if (sType == "tv") {
+        if (option == "" || option == null){
+            url = tvShowUrl + apiKey + "&query=" + fixed_text + "&page=" + _page;
+        } else {
+            url = ttvShowUrl + apiKey + "&page=" + _page;
+        }
     }
     console.log(url);
     fetch(url)
