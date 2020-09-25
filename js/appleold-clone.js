@@ -11,7 +11,7 @@ document.onclick = check_click;
 
 function check_click(e){
     let _id = e.target.id;
-    console.log(_id);
+    // console.log(_id);
     if (_id == "input-search"){
         document.getElementById("globalsearch").style.setProperty("width", "50%");
     } else {
