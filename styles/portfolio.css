@@ -254,4 +254,7 @@ footer {
     .project-h {
         font-size: 1.1em;
     }
+    .img-badge {
+        height: 16px;
+    }
 }
