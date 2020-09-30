@@ -39,6 +39,7 @@ nav ul > li {
     position: relative;
     font-size: 1.4em;
     font-weight: bold;
+    text-decoration: underline;
     /* text-shadow:  2px 3px rgb(46, 39, 39); */
 }
 .mini-p {
@@ -100,6 +101,15 @@ nav ul > li {
     color: white;
     font-weight: bold;
     /* text-shadow:  2px 2px #662E14; */
+}
+.img-badge {
+    height: 25px;
+    opacity: 0.8;
+    transition: all .3s cubic-bezier(0.47, 0, 0.745, 0.715);
+}
+.img-badge:hover{
+    transform: scale(1.02);
+    opacity: 1;
 }
 #projects {
     padding-top: 60px;
