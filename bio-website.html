@@ -1,0 +1,126 @@
+<html>
+    <head>
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1" />
+        <script type="text/javascript" src="./js/bio-website.js" defer></script>
+        <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Serif:wght@300;400;600;900&display=swap" rel="stylesheet">
+        <link rel="stylesheet" href="./styles/bio-webpage.css" />
+    </head>
+    <header>
+        <title>Biographic Personal Page</title>
+    </header>
+    <body>
+        <section id="main-wrapper">
+                <div class="top-n-nav">
+                    <div class="imgtop-container">
+                        <img src="./media-images/biographic-page/cover.png" class="imgtop centeredTopmidview" />
+                    </div>
+                    <nav>
+                        <ul class="ul-horizontal no-style">
+                            <li><a href="#" onclick="showSection('about');" class="menu-text typeFont1">About</a></li>
+                            <li><a href="#" onclick="showSection('writings');" class="menu-text typeFont1">Papers - Books</a></li>
+                            <li><a href="#" onclick="showSection('work');" class="menu-text typeFont1">Work</a></li>
+                            <li><a href="#" onclick="showSection('contact');" class="menu-text typeFont1">Contact</a></li>
+                        </ul>
+                    </nav>
+                </div>
+                <!-- Biography -> About + timeLine -->
+                <div id="container">
+                    <!-- presentation box section -->
+                    <section id="presentation-box">
+                        <div class="title-cont">
+                            <p class="centered title typeFont1 colorFont">Dr. Rocco Mangieri</p>
+                            <p class="reading-text typefont1 colorFont centered">Architect, professional, teacher, specialist in Semiotics and Socio-anthropology.<br> With 43 years of experience.</p>
+                        </div>
+                        <div class="text-img-mini">
+                            <p class="quote centered italic typeFont1 colorFont">"We live for books"</p>
+                            <p class="quote margin-left typeFont1 colorFont">Umberto Eco</p>
+                            <a href="https://es.wikipedia.org/wiki/Umberto_Eco" target="_blank"><img src="./media-images/biographic-page/eco-mini.jpg" class="img-rounded-mini margin-left" /></a>
+                        </div>
+                    </section>
+                    <!-- end presentation-box section -->
+                    <div class="about">
+                    <div class="text-container">
+                        <div>
+                            <p class="centered title typeFont1 colorFont less-padding-bottom">Born in Italy</p>
+                            <p class="reading-text typefont1 colorFont paddingAll just">&nbsp;&nbsp;&nbsp;&nbsp;In Bologna in 1950. From a very early age he showed a special interest in books and the knowledge they offered. At the age of 10, together with his parents, Gabriele and Maria, he began his arrival "on the other side of the great pond", towards Venezuelan lands. In these lands, he studies Architecture at the University of Zulia (L.U.Z).<br>&nbsp;&nbsp;&nbsp;&nbsp;After practicing in diverse works as an architect, he changes his focus a little towards another of his passions, the scenic arts. In the city of Barquisimeto, he worked for several years as director of the Juares Theater, a renowned "alma mater" for great artists of the central-western region of the country.<br>We can appreciate in more detail his achievements and studies, years later, in the section of his timeline above. As a son, I cannot help myself but I can only feel fascinated by his intellect.</p> 
+                            <p class="reading-text typefont1 colorFont paddingAll just">&nbsp;&nbsp;&nbsp;&nbsp;Our conversations have always been and will be a great pleasure to, in countless ways, nourish my mind soul and heart. This is the main reason to pay a little tribute to him, through this webpage.</p>
+                        </div>
+                    </div>
+                    <div class="text-container">
+                        <div>
+                            <p class="centered title typeFont1 colorFont less-padding-bottom">Semiotic and Umberto Eco</p>
+                            <p class="reading-text typefont1 colorFont paddingAll just">&nbsp;&nbsp;&nbsp;&nbsp;Throughout his professional and study career, in the "deep waters of the analysis of signs", Rocco established a strong bond with Umberto Eco. Besides being his teacher and guide, he was a great friend and inspiration for him and his works.</p>
+                            <div class="img-cont">
+                                <img src="./media-images/biographic-page/eco-grand.jpg" class="img-medium borderRounded" alt="Umberto Eco"/>
+                                <p class="text-source-link typeFont1">Umberto Eco <a href="http://elucabista.com/2016/02/26/umberto-eco-se-despide/">Source</a></p>
+                            </div>
+                        </div>
+                        <ul class="ul-horizontal no-style paddingTop">
+                            <li><img src="./media-images/biographic-page/facebook-icon.png" class="icon pointer" alt="Click to Share on facebook" onclick="shareSocial();" /></li>
+                        </ul>
+                    </div>
+                    </div>
+                    <!-- Work -> Previuos, Actual -->
+                    <div class="work">
+
+                    </div>
+                    <!-- Writings -> download? see a description of some
+                    and where to find them -->
+                    <div class="writings">
+                        <div class="text-explanation width50">
+                            <p class="reading-text typefont1 colorFont paddingAll just">&nbsp;&nbsp;&nbsp;&nbsp;During his many years of experience, some activities have always stood out. In this case, writing, is for Rocco something natural and preponderant. Today we are fortunate to have dozens of essays and 4 books published. Some of these writings, both in their digital and physical formats, have been very well accepted.</p>
+                            <p class="reading-text typefont1 colorFont paddingAll just">&nbsp;&nbsp;&nbsp;&nbsp;Right side, we present you some of his most downloaded and read books and papers. By clicking on the image, you can download it, or just click on the arrow to the source page, register an account and download the files.</p>
+                        </div>
+                        <!-- JS carousel -->
+                        <!-- JS carousel -->
+                        <div class="carousel-cont width50">
+                            <!-- Slideshow container -->
+                            <div class="slideshow-container">
+                                <!-- Full-width images with number and caption text -->
+                                <div class="mySlides fade">
+                                    <div class="numbertext">1 / 3</div>
+                                    <img src="./media-images/biographic-page/book-1.png" style="width:100%" class="borderRounded">
+                                    <div class="text-carousel colorFont typeFont1 centered">Semiotics Manual</div>
+                                </div>
+                                <div class="mySlides fade">
+                                    <div class="numbertext">2 / 3</div>
+                                    <img src="./media-images/biographic-page/book-3.png" style="width:100%" class="borderRounded">
+                                    <div class="text-carousel colorFont typeFont1 centered">Body and Speech</div>
+                                </div>
+                                <div class="mySlides fade">
+                                    <div class="numbertext">3 / 3</div>
+                                    <img src="./media-images/biographic-page/book-2.png" style="width:100%" class="borderRounded">
+                                    <div class="text-carousel colorFont typeFont1 centered">IMAGOLETRAGRAPHY</div>
+                                </div>
+                                <!-- Next and previous buttons -->
+                                <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+                                <a class="next" onclick="plusSlides(1)">&#10095;</a>
+                                <br>
+                                <!-- The dots/circles -->
+                                <div style="text-align:center">
+                                    <span class="dot" onclick="currentSlide(1)"></span>
+                                    <span class="dot" onclick="currentSlide(2)"></span>
+                                    <span class="dot" onclick="currentSlide(3)"></span>
+                                </div>
+                                <ul class="ul-horizontal no-style">
+                                    <li><a href="./media-images/biographic-page/files/MANUAL_DE_SEMIOTICA.pdf" id="book-download" target="_blank"><img src="./media-images/biographic-page/download-icon.png" class="icon pointer" /></a></li>
+                                    <li><a href="https://www.academia.edu/34599636/MANUAL_DE_SEMIOTICA" id="book-visit" target="_blank"><img src="./media-images/biographic-page/link-icon.png" class="icon pointer" /></a></li>
+                                </ul>
+                            </div>
+                        </div>
+                        <!-- end JS carousel -->
+                        <!-- end JS carousel -->
+                    </div>
+                    <!-- Contact info - Submit contact form -->
+                    <div class="contact">
+
+                    </div>
+                </div>
+        </section>
+        <footer>
+            <p class="mini-text centered typefont1 colorFont">Made by @theghost1980</p>
+            <p class="mini-text centered typefont1 colorFont"> | Icons provided by <a href="https://icons8.com/">Icons8.com</a></p>
+        </footer>
+    </body>
+</html>

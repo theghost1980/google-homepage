@@ -1,0 +1,411 @@
+:root { /* variables */
+    --disp-about: none;
+    --disp-work: none;
+    --disp-writings: none;
+    --disp-contact: none;
+    --position-nav: relative;
+    --top-nav: 0px;
+    --height-container: 230px;
+    --opacity-item: 1;
+    --transitions-item-long: all 0.39s cubic-bezier(0.95, 0.05, 0.795, 0.035); 
+    --transitions-item-short: all 0.2s cubic-bezier(0.95, 0.05, 0.795, 0.035); 
+    --height-imgtopcont: 300px;
+    --fontFamily-1: 'IBM Plex Serif', serif;
+}
+html,body {
+    padding: 0px;
+    margin: 0px;
+    width: 100%;
+    height: 100%;
+    background-color: rgb(172, 166, 146);
+}
+#main-wrapper {
+    display: flex;
+    flex-direction: column;
+    max-width: 960px;
+    height: auto;
+    box-shadow: 2px 1px 5px 4px rgb(100, 100, 100);
+    margin: auto;
+}
+.top-n-nav {
+    display: flex;
+    flex-direction: column;
+    background-color: whitesmoke;
+    max-width: 100%;
+}
+#container {
+    display: flex;
+    flex-direction: column;
+    background-color: whitesmoke;
+    max-width: 100%;
+    height: var(--height-container);
+    /* height: auto; */
+    /* for transition */
+    transition: var(--transitions-item-long);
+}
+.imgtop-container {
+    /* border-radius: 5px; */
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    height: var(--height-imgtopcont);
+    transition: var(--transitions-item-long);
+}
+.imgtop {
+    /* display: block; */
+    max-width: 100%;
+    height: 300px;
+    /* border-top-left-radius: 5px;
+    border-top-right-radius: 5px; */
+}
+nav {
+    background-color: rgb(230, 126, 56);
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    height: 70px;
+    justify-content: center;
+    align-items: center;
+    margin: 0 auto;
+    position: var(--position-nav);
+    top: var(--top-nav);
+}
+.ul-horizontal {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin: 0px;
+    padding: 0px;
+}
+.ul-horizontal li {
+    float: inherit;
+    padding: 20px;
+}
+.no-style {
+    list-style: none;
+}
+#presentation-box {
+    /* border: 1px solid black; */
+    display: flex;
+    flex-direction: column;
+    /* justify-content: center; */
+    align-items: center;
+    width: 100%;
+    height: 230px;
+    /* test for animations */
+    /* opacity: var(--opacity-item);
+    transition: var(--transitions-item-short); */
+}
+.title-cont {
+    display: flex;
+    flex-direction: column;
+}
+/* Pages / Main Divs */
+.about {
+    display: var(--disp-about);
+    flex-direction: row;
+    flex-wrap: wrap;
+    width: 100%;
+    /* height: auto; */
+    height: var(--height-container);
+    background-color: whitesmoke;
+}
+.text-container {
+    display: flex;
+    flex-direction: column;
+    width: 47%;
+    padding-left: 20px;
+}
+.work {
+    display: var(--disp-work);
+    flex-direction: column;
+    width: 100%;
+    height: 740px;
+    background-color: whitesmoke;
+}
+.writings {
+    display: var(--disp-writings);
+    flex-direction: row;
+    flex-wrap: wrap;
+    width: 100%;
+    /* height: 740px; */
+    height: var(--height-container);
+    background-color: whitesmoke;
+}
+.width50 {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 49%;
+    height: 400px;
+}
+.carousel-cont {
+    align-items: baseline;
+}
+.contact {
+    display: var(--disp-contact);
+    flex-direction: column;
+    width: 100%;
+    height: 740px;
+    background-color: whitesmoke;
+}
+.text-img-mini {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+/* End pages/main divs */
+.paddingTop {
+    padding-top: 10px;
+}
+/* text classes and elements */
+.mini-text {
+    font-size: 0.7em;
+}
+.centered {
+    text-align: center;
+}
+.quote {
+    font-weight: 300;
+    font-size: 0.8em;
+    padding: 0px;
+    margin: 0px;
+}
+.italic {
+    font-style: italic;
+}
+.title {
+    font-size: 1.3em;
+    font-weight: 600;
+}
+.menu-text {
+    font-size: 1em;
+    color: white;
+    text-shadow: 1px 1px rgb(131, 104, 104);
+}
+.menu-text:hover{
+    font-weight: 900;
+}
+.typeFont1 {
+    font-family: var(--fontFamily-1);
+}
+.reading-text {
+    font-size: 0.9em;
+    font-weight: 400;
+    line-height: 1.6em;
+}
+.colorFont {
+    color: rgb(104, 30, 4);
+}
+.paddingAll {
+    padding: 10px 20px 20px 20px;
+}
+.less-padding-bottom {
+    padding-bottom: 0px;
+}
+.just {
+    text-align: justify;
+}
+.text-source-link {
+    font-size: 0.7em;
+}
+.text-carousel {
+    font-size: 0.8em;
+}
+/* end text classes */
+.carousel-cont {
+    margin-top: 20px;
+}
+/* Images */
+.img-cont {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.img-medium {
+    display: block;
+    width: 90%;
+}
+.img-rounded-mini {
+    border: 1px solid black;
+    border-radius: 50%;
+    height: 27px;
+}
+.borderRounded {
+    border-radius: 5px;
+}
+.icon {
+    display: block;
+    height: 30px;
+}
+.icon:hover{
+    border-radius: 20%;
+    box-shadow: 1px 2px 1px rgb(107, 19, 19);
+}
+/* end Images */
+.pointer {
+    cursor: pointer;
+}
+footer {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    bottom: 0px;
+    width: 100%;
+    margin: 0 auto;
+}
+/* margins & padding as classes */
+.margin-left {
+    margin-left: 10px;
+}
+/* end margins */
+
+/* media rules */
+@media screen and (max-width: 600px){
+    :root { /* variables */
+        --disp-about: none;
+        --disp-work: none;
+        --disp-writings: none;
+        --disp-contact: none;
+        --position-nav: relative;
+        --top-nav: 0px;
+        --height-container: 300px;
+        --opacity-item: 1;
+        --transitions-item-long: all 0.39s cubic-bezier(0.95, 0.05, 0.795, 0.035); 
+        --transitions-item-short: all 0.2s cubic-bezier(0.95, 0.05, 0.795, 0.035); 
+        --height-imgtopcont: auto
+        --fontFamily-1: 'IBM Plex Serif', serif;
+    }
+    /* html,body {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    } */
+    #main-wrapper {
+        max-width: 100%;
+    }
+    .imgtop {
+        /* display: block; */
+        max-width: 100%;
+        height: auto;
+    }
+    nav {
+        height: 40px;
+    }
+    .menu-text {
+        font-size: 0.7em;
+    }
+    .title {
+        font-size: 1em;
+    }
+    .reading-text {
+        font-size: 0.8em;
+    }
+    .title-cont {
+        width: 90%;
+    }
+    .ul-horizontal li {
+        padding: 10px;
+    }
+    .text-container {
+        width: 100%;
+    }
+    /* Let's override the height over here */
+    #container {
+        height: auto;
+    }
+
+}
+@media screen and (min-width: 601px) and (max-width:850px){
+    
+}
+/* end media rules */
+
+/* Css for Carousel */
+* {box-sizing:border-box}
+/* Slideshow container */
+.slideshow-container {
+  max-width: 200px;
+  position: relative;
+  margin: auto;
+}
+/* Hide the images by default */
+.mySlides {
+  display: none;
+}
+/* Next & previous buttons */
+.prev, .next {
+  cursor: pointer;
+  position: absolute;
+  top: 50%;
+  width: auto;
+  margin-top: -22px;
+  padding: 16px;
+  color: white;
+  font-weight: bold;
+  font-size: 18px;
+  transition: 0.6s ease;
+  border-radius: 0 3px 3px 0;
+  user-select: none;
+}
+/* Position the "next button" to the right */
+.next {
+  right: 0;
+  border-radius: 3px 0 0 3px;
+}
+/* On hover, add a black background color with a little bit see-through */
+.prev:hover, .next:hover {
+  background-color: rgba(0,0,0,0.8);
+}
+/* Caption text */
+.text {
+  color: #f2f2f2;
+  font-size: 15px;
+  padding: 8px 12px;
+  position: absolute;
+  bottom: 8px;
+  width: 100%;
+  text-align: center;
+}
+/* Number text (1/3 etc) */
+.numbertext {
+  color: #f2f2f2;
+  font-size: 12px;
+  padding: 8px 12px;
+  position: absolute;
+  top: 0;
+}
+/* The dots/bullets/indicators */
+.dot {
+  cursor: pointer;
+  height: 15px;
+  width: 15px;
+  margin: 0 2px;
+  background-color: #bbb;
+  border-radius: 50%;
+  display: inline-block;
+  transition: background-color 0.6s ease;
+}
+.active, .dot:hover {
+  background-color: #717171;
+}
+/* Fading animation */
+.fade {
+  -webkit-animation-name: fade;
+  -webkit-animation-duration: 1.5s;
+  animation-name: fade;
+  animation-duration: 1.5s;
+}
+@-webkit-keyframes fade {
+  from {opacity: .4}
+  to {opacity: 1}
+}
+@keyframes fade {
+  from {opacity: .4}
+  to {opacity: 1}
+}
+/* end Css for carousel */
