@@ -15,7 +15,7 @@ function addPathNDownload(n){
     let _file = _arFileNames[n-1];
     // console.log("ArBook: " + _path);
     _bookAlink.href = _path;
-    _bookAFile.href = _file;
+    _bookAFile.href = "./media-images/biographic-page/" + _file;
 }
 // Thumbnail image controls
 function currentSlide(n) {
